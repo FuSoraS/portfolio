@@ -1,12 +1,47 @@
 ---
-const {image, title, content, linkWeb, linkRepo } = Astro.props;
+const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.props;
 ---
-<div>
-    <img src={image} alt="porjectos">
-    <img src="astro.svg" alt="" id="card-image">
+<div class="container-main">
+    <img class="cover" src={image} alt="porjectos">
+    {imageL1 && <img class="icon-lenguages" src={imageL1} alt="">}
+    {imageL2 && <img class="icon-lenguages" src={imageL2} alt="">}
     <h3 class="text-2xl">{title}</h3>
     <p>{content}</p>
-    <a href={linkWeb} class="text-blue-500">Ver proyecto</a>
-    <a href={linkRepo} class="text-blue-500">Ver repositorio</a>
+    <a href={linkWeb} class="text-blue-500" rel="noreferrer noopener" target="_blank">Sitio web</a>
+    <a href={linkRepo} class="text-blue-500" rel="noreferrer noopener" target="_blank">Código</a>
 </div>
-</div>
+<style>
+    .container-main {
+        border: 2px solid #fff;
+        border-radius: 15px;
+        min-height: 400px;
+    }
+    .cover {
+        width: 100%;
+        height: 200px;
+        border-radius: 16px 16px 0 0;
+        margin: auto;
+    }
+    .icon-lenguages {
+        display: inline-flex;
+        justify-content: center;
+
+        height: 25px;
+        width: fit-content;
+        margin: 20px 0 0 20px;
+    }
+    h3 {
+        text-align: center;
+        color: #91E891
+    }
+    a {
+        background-color: #2FA35F;
+        margin: 0 10px 0 10px;
+        color: #fff;
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+</style

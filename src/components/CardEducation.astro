@@ -6,7 +6,7 @@ const {image, title, date, location, content } = Astro.props;
         <div class="container-img">   
             <img src={image} alt="">
         </div>
-        <h3 class="text-2xl">{title}</h3>
+        <h3>{title}</h3>
     </div>
     <p class="date">{date} - {location}</p>
     <p>{content}</p>
@@ -30,5 +30,9 @@ const {image, title, date, location, content } = Astro.props;
     }
     .container-education {
         margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
     }
 </style>

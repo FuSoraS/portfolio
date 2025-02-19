@@ -1,33 +1,67 @@
 ---
 import "../styles/global.css";
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
 import CardEducation from "../components/CardEducation.astro";
 import Header from "../components/Header.astro";
 import CardProject from "../components/CardProject.astro";
 
 import workIcon from "../assets/icons-work.png";
-import educationIcon from "../assets/icons-education.png"
+import educationIcon from "../assets/icons-education.png";
+import fitBg from "../assets/fit.webp";
+import linkBg from "../assets/link-hub.webp";
+import cssIcon from "../assets/css.svg";
+import htmlIcon from "../assets/html5.svg";
+import astroDarkIcon from "../assets/astro_dark.svg";
 ---
 
 <Layout title="Inicio" description="Mi portafolio de desarrollo web">
     <Nav />
     <Header />
     <h2 id="about-me">Sobre mí</h2>
-    <p class="content-m">+2 años de formación como Técnico en Análisis de Programación. Experiencia en desarrollo web colaborativo, aprendiendo tecnologías modernas y aplicando buenas prácticas tanto en los sistemas operativos Windows y Gnu-Linux.</p>
-        <h2 id="experience">Formación y experiencia</h2>
-        <CardEducation image={workIcon.src} title="Soporte técnico" date="2025 - Actualidad" location="[La higuera, chile]" content="Soporte técnico en organización y gestión de cableado de red, además de mantenimiento básico de equipos informáticos."/>
-        <CardEducation image={educationIcon.src} title="Analista Programador" date="2023 - Actualidad" location="[La serena, chile]" content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."/>    
-       <h2 id="projects">Projetos</h2>
-    <CardProject image={null} title="Proyecto 1" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc." linkWeb="https://www.github.com" linkRepo="https://www.github.com"/>
-    <CardProject image="https://via.placeholder.com/150" title="Proyecto 2" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc." linkWeb="https://www.github.com" linkRepo="https://www.github.com"/>
-    <footer>
-        2025
-    </footer>
-    <script is:inline>
-        // const card = document.getElementById('card-image');
-        // if (card === null) return;
-    </script>
+    <p class="content-m">
+        +2 años de formación como Técnico en Análisis de Programación.
+        Experiencia en desarrollo web colaborativo, aprendiendo tecnologías
+        modernas y aplicando buenas prácticas tanto en los sistemas operativos
+        Windows y Gnu-Linux.
+    </p>
+    <h2 id="experience">Formación y experiencia</h2>
+    <CardEducation
+        image={workIcon.src}
+        title="Soporte técnico"
+        date="2025 - Actualidad"
+        location="[La higuera, chile]"
+        content="Soporte técnico en organización y gestión de cableado de red, además de mantenimiento básico de equipos informáticos."
+    />
+    <CardEducation
+        image={educationIcon.src}
+        title="Analista Programador"
+        date="2023 - Actualidad"
+        location="[La serena, chile]"
+        content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
+    />
+    <h2 id="projects">Projetos</h2>
+    <div class="card-projects">
+        <CardProject
+            image={fitBg.src}
+            imageL1={htmlIcon.src}
+            imageL2={cssIcon.src}
+            title="FitZone Gym"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc."
+            linkWeb="https://fusoras.github.io/page-fake1/"
+            linkRepo="https://github.com/FuSoraS/page-fake1"
+        />
+        <CardProject
+            image={linkBg.src}
+            imageL1={astroDarkIcon.src}
+            imageL2={cssIcon.src}
+            title="Link hub"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc."
+            linkWeb="https://fusoras.github.io/link-hub/"
+            linkRepo="https://github.com/FuSoraS/link-hub"
+        />
+    </div>
+    <footer>2025</footer>
     <style>
         :root {
             --h2-m: 50px;
@@ -36,9 +70,10 @@ import educationIcon from "../assets/icons-education.png"
             scroll-behavior: smooth;
             min-height: 200vh;
         }
-        
+
         h2 {
-            font-size: 36px;
+            font-size: 30px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
         .content-m {
@@ -47,6 +82,14 @@ import educationIcon from "../assets/icons-education.png"
         footer {
             text-align: center;
             padding: 50px;
+        }
+        .card-projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        #projects {
+            margin-top: 50px;
         }
     </style>
 </Layout>
