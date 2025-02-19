@@ -3,12 +3,12 @@ const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.prop
 ---
 <div class="container-main">
     <img class="cover" src={image} alt="porjectos">
-    {imageL1 && <img class="icon-lenguages" src={imageL1} alt="">}
-    {imageL2 && <img class="icon-lenguages" src={imageL2} alt="">}
-    <h3 class="text-2xl">{title}</h3>
+    {imageL1 && <img class="icon-languages" src={imageL1} alt="">}
+    {imageL2 && <img class="icon-languages" src={imageL2} alt="">}
+    <h3>{title}</h3>
     <p>{content}</p>
-    <a href={linkWeb} class="text-blue-500" rel="noreferrer noopener" target="_blank">Sitio web</a>
-    <a href={linkRepo} class="text-blue-500" rel="noreferrer noopener" target="_blank">Código</a>
+    <a href={linkWeb} class="" rel="noreferrer noopener" target="_blank">Sitio web</a>
+    <a href={linkRepo} class="" rel="noreferrer noopener" target="_blank">Código</a>
 </div>
 <style>
     .container-main {
@@ -22,7 +22,7 @@ const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.prop
         border-radius: 16px 16px 0 0;
         margin: auto;
     }
-    .icon-lenguages {
+    .icon-languages {
         display: inline-flex;
         justify-content: center;
 
@@ -34,6 +34,7 @@ const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.prop
         margin-left: 20px;
     }
     h3 {
+        font-size: 32px;
         margin-top: 10px;
         text-align: center;
         color: #91E891
