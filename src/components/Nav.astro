@@ -1,0 +1,37 @@
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#projects">Proyectos</a>
+</nav>
+<style>
+    nav {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: sticky;
+        top: 12px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        color: light-dark(#333, #Fff);
+        background-color: #4e4e4e;
+        max-width: 300px;
+        border-radius: 20px;
+        border-bottom: 2px solid light-dark(#353535,#fff);
+        border-right: 2px solid light-dark(#313131,#fff);
+        animation: animate-header linear both;
+
+        a {
+            margin: 10px;
+        }
+        a:hover {
+            color: #16b2c7;
+        }
+    }
+    @keyframes animate-header {
+            to {
+                background-color: rgba(255, 255, 255, 0.185);
+                backdrop-filter: blur(4px);
+            }
+        }
+</style>

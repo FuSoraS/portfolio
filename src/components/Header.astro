@@ -1,0 +1,50 @@
+---
+import githubDark from '../assets/github-dark.svg';
+import linkedin from '../assets/linkedin.svg';
+---
+<h1 class="text-5xl text-center m-4">Sofware Developer</h1>
+<p class="header-p">Soy <strong>desarrollador de software</strong> y <strong>front-end</strong>, especializado en la creación de sitios web eficientes.</p>
+<div>
+    <a href="https://www.linkedin.com/in/fusoras" rel="noreferrer noopener" target="_blank"><img src={linkedin.src} alt="linkedin"> Linkedin</a>
+    <a href="https://github.com/FuSoraS" rel="noreferrer noopener" target="_blank"><img src={githubDark.src} alt="github"> Github</a>
+</div>
+<style>
+    :root {
+        --size: 5px solid light-dark(#333, #fff);
+    }
+    .header-p {
+        text-wrap: pretty;
+        margin: auto;
+        margin-bottom: 32px;
+        width: 450px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        font-weight: bold;
+        margin-bottom: 120px;
+        border: 2px solid light-dark(#333, #fff);
+        padding: 16px;
+        border-radius: 8px;
+        transition: border 0.1s ease-in-out;
+        gap: .5rem;
+        max-height: 2.5rem;
+        transition: border .3 sease-in-out;
+    }
+    a:hover {
+        border-bottom: var(--size);
+        border-right: var(--size);
+    }
+    img {
+        width: 22px;
+    }
+</style>
