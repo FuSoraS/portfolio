@@ -15,10 +15,10 @@ import educationIcon from "../assets/icons-education.png"
     <Header />
     <h2 id="about-me">Sobre mí</h2>
     <p class="content-m">+2 años de formación como Técnico en Análisis de Programación. Experiencia en desarrollo web colaborativo, aprendiendo tecnologías modernas y aplicando buenas prácticas tanto en los sistemas operativos Windows y Gnu-Linux.</p>
-    <h2 id="experience">Formación y experiencia</h2>
-    <CardEducation image={workIcon.src} title="Soporte técnico" date="2025 - Actualidad" location="[La higuera, chile]" content="Soporte técnico en organización y gestión de cableado de red, además de mantenimiento básico de equipos informáticos."/>
-    <CardEducation image={educationIcon.src} title="Analista Programador" date="2023 - Actualidad" location="[La serena, chile]" content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."/>
-    <h2 id="projects">Projetos</h2>
+        <h2 id="experience">Formación y experiencia</h2>
+        <CardEducation image={workIcon.src} title="Soporte técnico" date="2025 - Actualidad" location="[La higuera, chile]" content="Soporte técnico en organización y gestión de cableado de red, además de mantenimiento básico de equipos informáticos."/>
+        <CardEducation image={educationIcon.src} title="Analista Programador" date="2023 - Actualidad" location="[La serena, chile]" content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."/>    
+       <h2 id="projects">Projetos</h2>
     <CardProject image={null} title="Proyecto 1" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc." linkWeb="https://www.github.com" linkRepo="https://www.github.com"/>
     <CardProject image="https://via.placeholder.com/150" title="Proyecto 2" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc." linkWeb="https://www.github.com" linkRepo="https://www.github.com"/>
     <footer>
@@ -34,13 +34,15 @@ import educationIcon from "../assets/icons-education.png"
         }
         html {
             scroll-behavior: smooth;
+            min-height: 200vh;
         }
+        
         h2 {
             font-size: 36px;
-            margin-left: var(--h2-m);
             margin-bottom: 20px;
         }
         .content-m {
+            margin-bottom: 30px;
         }
         footer {
             text-align: center;
