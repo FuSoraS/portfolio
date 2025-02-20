@@ -1,7 +1,7 @@
 ---
 const {image, title, date, location, content } = Astro.props;
 ---
-<div class="container-education">
+<article class="container-education">
     <div class="container-title">
         <div class="container-img">   
             <img src={image} alt="">
@@ -10,7 +10,7 @@ const {image, title, date, location, content } = Astro.props;
     </div>
     <p class="date">{date} - {location}</p>
     <p>{content}</p>
-</div>
+</article>
 <style>
     .date {
         color: light-dark(#474747, #C0C0C0);

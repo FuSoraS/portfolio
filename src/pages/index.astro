@@ -25,21 +25,24 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         modernas y aplicando buenas prácticas tanto en los sistemas operativos
         Windows y Gnu-Linux.
     </p>
-    <h2 id="experience">Formación y experiencia</h2>
-    <CardEducation
-        image={workIcon.src}
-        title="Soporte técnico"
-        date="2025 - Actualidad"
-        location="[La higuera, chile]"
-        content="Soporte técnico en organización y gestión de cableado de red, además de mantenimiento básico de equipos informáticos."
-    />
-    <CardEducation
-        image={educationIcon.src}
-        title="Analista Programador"
-        date="2023 - Actualidad"
-        location="[La serena, chile]"
-        content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
-    />
+    <section id="experience">
+        <p>Formación y experiencia</p>
+        <h2>Formación y experiencia</h2>
+        <CardEducation
+            image={workIcon.src}
+            title="Soporte técnico"
+            date="2025 - Actualidad"
+            location="[La higuera, chile]"
+            content="Soporte técnico en organización y gestión de cableado de red, además de mantenimiento básico de equipos informáticos."
+        />
+        <CardEducation
+            image={educationIcon.src}
+            title="Analista Programador"
+            date="2023 - Actualidad"
+            location="[La serena, chile]"
+            content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
+        />
+    </section>
     <h2 id="projects">Projetos</h2>
     <div class="card-projects">
         <CardProject
@@ -98,6 +101,13 @@ import astroDarkIcon from "../assets/astro_dark.svg";
             font-size: 50px;
             margin-left: 5px;
             color: var(--green-dark);
+        }
+        #experience {
+            margin-bottom: 150px;
+        }
+        #experience p {
+            color: transparent;
+            margin-bottom: 20px;
         }
     </style>
 </Layout>
