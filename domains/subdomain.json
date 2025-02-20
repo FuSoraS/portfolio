@@ -1,0 +1,11 @@
+{
+    "description": "Describe",
+    "repo": "https://github.com/FuSoraS/portfolio",
+    "owner": {
+        "username": "github-FuSoraS",
+        "email": "developer.FuSoraS@gmail.com"
+    },
+    "record": {
+        "CNAME": "github-FuSoraS.github.io"
+    }
+}
