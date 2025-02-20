@@ -10,7 +10,7 @@ import linkedin from '../assets/linkedin.svg';
 </div>
 <style>
     :root {
-        --size: 5px solid light-dark(#333, #fff);
+        --size-border: 5px solid light-dark(#333, #fff);
     }
     h1 {
         text-align: center;
@@ -22,6 +22,9 @@ import linkedin from '../assets/linkedin.svg';
         margin: auto;
         margin-bottom: 32px;
         width: 450px;
+    }
+    .header-p strong {
+        color: var(--green);
     }
 
     div {
@@ -35,19 +38,20 @@ import linkedin from '../assets/linkedin.svg';
         align-items: center;
         justify-content: flex-start;
 
+        color: var(--color-link);
+        background-color: #252525;
         font-weight: bold;
         margin-bottom: 120px;
         border: 2px solid light-dark(#333, #fff);
-        padding: 16px;
+        padding: 12px 10px;
         border-radius: 8px;
         transition: border 0.1s ease-in-out;
         gap: .5rem;
         max-height: 2.5rem;
-        transition: border .3 sease-in-out;
+        transition: background-color .3s ease-in-out;
     }
     a:hover {
-        border-bottom: var(--size);
-        border-right: var(--size);
+        background-color: var(--green-dark);
     }
     img {
         width: 22px;

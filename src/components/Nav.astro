@@ -13,20 +13,22 @@
         top: 0;
         margin-top: 20px;
         margin-bottom: 25px;
-        color: light-dark(#333, #Fff);
         background-color: #4e4e4e;
         width: fit-content;
         padding: 0 20px;
         border-radius: 15px;
         border-bottom: 2px solid light-dark(#353535,#fff);
         border-right: 2px solid light-dark(#313131,#fff);
+        font-size: 16px;
         animation: animate-header linear both;
 
         a {
             margin: 10px;
+            color: var(--color-link); 
+            transition: color 0.2s ease-in-out;
         }
         a:hover {
-            color: #16b2c7;
+            color: var(--green-dark);
         }
     }
     @keyframes animate-header {

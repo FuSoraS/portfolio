@@ -18,7 +18,7 @@ import astroDarkIcon from "../assets/astro_dark.svg";
 <Layout title="Inicio" description="Mi portafolio de desarrollo web">
     <Nav />
     <Header />
-    <h2 id="about-me">Sobre mí</h2>
+    <h2 id="about-me">Sobre mí<span>.</span></h2>
     <p class="content-m">
         +2 años de formación como Técnico en Análisis de Programación.
         Experiencia en desarrollo web colaborativo, aprendiendo tecnologías
@@ -65,6 +65,9 @@ import astroDarkIcon from "../assets/astro_dark.svg";
     <style>
         :root {
             --h2-m: 50px;
+            --color-link : light-dark(#333, #Fff);
+            --green: rgb(74, 175, 96);
+            --green-dark: rgb(68, 158, 87);
         }
         html {
             scroll-behavior: smooth;
@@ -90,6 +93,11 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         }
         #projects {
             margin-top: 50px;
+        }
+        #about-me span {
+            font-size: 50px;
+            margin-left: 5px;
+            color: var(--green-dark);
         }
     </style>
 </Layout>
