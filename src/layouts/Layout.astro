@@ -1,13 +1,13 @@
 ---
+import '@fontsource/lato';
 const { title, description } = Astro.props;
-const BASE = "portfolio";
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href={`/${BASE}/favicon.svg`} type="image/svg+xml">
+		<link rel="icon" href={`/favicon.svg`} type="image/svg+xml">
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={`${description}`}>
 		<title>{title}</title>
@@ -23,5 +23,6 @@ const BASE = "portfolio";
 		margin: 0 auto;
 		width: min(700px, 90%);
 		height: 100%;
+		font-family: 'Lato', sans-serif;
 	}
 </style>
