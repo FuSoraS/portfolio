@@ -1,5 +1,5 @@
 ---
-const {image, title, date, location, content } = Astro.props;
+const {image, title, date, content } = Astro.props;
 ---
 <article class="container-education">
     <div class="container-title">
@@ -8,7 +8,7 @@ const {image, title, date, location, content } = Astro.props;
         </div>
         <h3>{title}</h3>
     </div>
-    <p class="date">{date} - {location}</p>
+    <p class="date">{date}</p>
     <p>{content}</p>
 </article>
 <style>
