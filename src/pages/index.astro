@@ -9,6 +9,7 @@ import CardProject from "../components/CardProject.astro";
 import workIcon from "../assets/icons-work.png";
 import educationIcon from "../assets/icons-education.png";
 import fitBg from "../assets/fit.webp";
+import blogBg from "../assets/blog.png";
 import linkBg from "../assets/link-hub.webp";
 import cssIcon from "../assets/css.svg";
 import htmlIcon from "../assets/html5.svg";
@@ -44,6 +45,15 @@ import astroDarkIcon from "../assets/astro_dark.svg";
     </section>
     <h2 id="projects">Projetos</h2>
     <div class="card-projects">
+        <CardProject 
+            image={blogBg.src}
+            imageL1={astroDarkIcon.src}
+            imageL2={cssIcon.src}
+            title="Blog"
+            content="Página web desarrollada con Astro. Implementé componentes reutilizables de Astro y utilicé Node.js junto con npm para la administración de dependencias."
+            linkWeb="https://fusoras.github.io/blog/"
+            linkRepo="https://github.com/FuSoraS/blog"
+        />
         <CardProject
             image={fitBg.src}
             imageL1={htmlIcon.src}
