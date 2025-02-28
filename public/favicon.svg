@@ -2,49 +2,24 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="210mm"
-   viewBox="0 0 210 210"
+   width="204.06137mm"
+   height="200.61752mm"
+   viewBox="0 0 204.06137 200.61752"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (e7c3feb, 2024-10-09)"
-   sodipodi:docname="favicon.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
-     inkscape:zoom="0.38117475"
-     inkscape:cx="184.95454"
-     inkscape:cy="529.94066"
-     inkscape:window-width="1366"
-     inkscape:window-height="755"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer2" />
   <defs
      id="defs1">
     <linearGradient
-       id="swatch3"
-       inkscape:swatch="solid">
+       id="swatch3">
       <stop
          style="stop-color:#ff0000;stop-opacity:1;"
          offset="0"
          id="stop3" />
     </linearGradient>
     <linearGradient
-       id="swatch2"
-       inkscape:swatch="solid">
+       id="swatch2">
       <stop
          style="stop-color:#000000;stop-opacity:0;"
          offset="0"
@@ -52,12 +27,10 @@
     </linearGradient>
   </defs>
   <g
-     inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Capa 2"
-     transform="matrix(1.7736697,0,0,1.6976458,-96.715715,-36.334338)">
+     transform="matrix(1.7736697,0,0,1.6976458,-99.49806,-41.012134)">
     <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.99018;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:140.7;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="fill:#003f23;fill-opacity:1;stroke:#ffffff;stroke-width:3.99022;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:140.7;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="path6"
        cx="113.62248"
        cy="83.245216"
@@ -65,28 +38,14 @@
        ry="57.091866" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:89.0937px;font-family:'Onest Black';-inkscape-font-specification:'Onest Black,  Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#00ff10;fill-opacity:1;stroke:#000000;stroke-width:5.19594;stroke-dasharray:none;stroke-opacity:1"
-       x="120.30133"
-       y="126.56467"
-       id="text5"
-       transform="scale(0.9101316,1.0987422)"><tspan
-         sodipodi:role="line"
-         id="tspan5"
-         style="fill:#00ff10;fill-opacity:1;stroke-width:5.19594;stroke-dasharray:none"
-         x="120.30133"
-         y="126.56467">F</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:97.9107px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#01ff00;fill-opacity:1;stroke:#000000;stroke-width:5.10574;stroke-dasharray:none;stroke-opacity:1"
-       x="63.564243"
-       y="101.34454"
+       style="font-size:114.924px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.99291;stroke-dasharray:none;stroke-opacity:1"
+       x="82.576637"
+       y="124.08021"
        id="text4"
-       inkscape:label="text4"
        transform="matrix(0.96197116,-0.01598448,0.01698899,1.0392499,0,0)"><tspan
          id="tspan4"
-         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:97.9107px;font-family:'Onest Black';-inkscape-font-specification:'Onest Black,  Heavy';fill:#01ff00;fill-opacity:1;stroke:#000000;stroke-width:5.10574;stroke-dasharray:none;stroke-opacity:1"
-         x="63.564243"
-         y="101.34454"
-         sodipodi:role="line">P</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:114.924px;font-family:'Onest Black';-inkscape-font-specification:'Onest Black,  Heavy';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.99291;stroke-dasharray:none;stroke-opacity:1"
+         x="82.576637"
+         y="124.08021">P</tspan></text>
   </g>
 </svg>
