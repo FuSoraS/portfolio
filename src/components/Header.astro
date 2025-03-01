@@ -1,18 +1,35 @@
 ---
-import githubDark from '../assets/github-dark.svg';
-import linkedin from '../assets/linkedin.svg';
+import githubDark from "../assets/github-dark.svg";
+import linkedin from "../assets/linkedin.svg";
 ---
-<h1>Sofware Developer</h1>
-<p class="header-p">Soy <strong>desarrollador de software</strong> y <strong>front-end</strong>, especializado en la creación de sitios web eficientes.</p>
-<div>
-    <a href="https://www.linkedin.com/in/fusoras" rel="noreferrer noopener" target="_blank"><img src={linkedin.src} alt="linkedin"> Linkedin</a>
-    <a href="https://github.com/FuSoraS" rel="noreferrer noopener" target="_blank"><img src={githubDark.src} alt="github"> Github</a>
-</div>
+<header class="header">
+    <h1 class="header-h1">Front-end Developer</h1>
+    <p class="header-p">
+        Soy un apasionado por la tecnología, especializado en
+        <strong>web desarrollando</strong> desde
+        <strong>Gnu-Linux</strong>.
+    </p>
+</header>
+<section class="btn">
+    <a
+        class="btn-a"
+        href="https://www.linkedin.com/in/fusoras"
+        rel="noreferrer noopener"
+        target="_blank"><img src={linkedin.src} alt="linkedin" /> Linkedin</a
+    >
+    <a
+        class="btn-a"
+        href="https://github.com/FuSoraS"
+        rel="noreferrer noopener"
+        target="_blank"><img src={githubDark.src} alt="github" /> Github</a
+    >
+</section>
+
 <style>
     :root {
         --size-border: 5px solid light-dark(#333, #fff);
     }
-    h1 {
+    .header-h1 {
         text-align: center;
         font-weight: bold;
         margin-top: 100px;
@@ -29,13 +46,12 @@ import linkedin from '../assets/linkedin.svg';
         color: var(--green);
     }
 
-    div {
+    .btn {
         display: flex;
         justify-content: center;
         gap: 10px;
-        
     }
-    a {
+    .btn-a {
         display: inline-flex;
         align-items: center;
         justify-content: flex-start;
@@ -49,14 +65,14 @@ import linkedin from '../assets/linkedin.svg';
         padding: 12px 10px;
         border-radius: 8px;
         transition: border 0.1s ease-in-out;
-        gap: .5rem;
+        gap: 0.5rem;
         max-height: 2.5rem;
-        transition: background-color .3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
     }
-    a:hover {
+    .btn-a:hover {
         background-color: var(--green-dark);
     }
-    img {
+    .btn-a img {
         width: 22px;
         aspect-ratio: 22px / 22px;
     }
