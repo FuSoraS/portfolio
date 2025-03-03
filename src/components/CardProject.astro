@@ -1,28 +1,35 @@
 ---
 const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.props;
 ---
-<article class="container-main">
-    <img class="cover" src={image} alt="porjectos">
-    {imageL1 && <img class="icon-languages first-icon" src={imageL1} alt="">}
-    {imageL2 && <img class="icon-languages" src={imageL2} alt="">}
+<article class="ar-main">
+    <img class="ar-main-cover" src={image} alt="porjectos">
+    {imageL1 && (
+        <img class="icon-languages first-icon" src={imageL1} alt={title} />
+    )}
+    {imageL2 && (
+        <img class="icon-languages" src={imageL2} alt={title} />
+    )}
+
     <h3>{title}</h3>
     <p>{content}</p>
-    <a href={linkWeb} class="first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
-    <a href={linkRepo} class="" rel="noreferrer noopener" target="_blank">Código</a>
+    <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
+    <a href={linkRepo} class="ar-a" rel="noreferrer noopener" target="_blank">Código</a>
 </article>
+
 <style>
-    .container-main {
+    .ar-main {
         border: 2px solid light-dark(#333,#fff);
         border-radius: 15px;
+        width: 100%;
         height: fit-content;
-        padding-bottom: 15px;
-        width: 100%;
+        overflow: hidden;
     }
-    .cover {
-        width: 100%;
+
+    .ar-main-cover {
         height: 200px;
-        border-radius: 16px 16px 0 0;
+        max-width: 100%;
         margin: auto;
+        object-fit: cover;
     }
     .icon-languages {
         display: inline-flex;
@@ -43,15 +50,19 @@ const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.prop
         color: #91E891;
         font-weight: bold;
     }
-    a {
+    .ar-a {
+        display: inline-block;
         background-color: #2FA35F;
         text-decoration: none;
-        margin: 0 8px 10px 10px;
         color: #fff;
         border-radius: 10px;
-        padding: 5px 10px;
+        font-weight: bold;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        margin-right: 10px;
+        margin-bottom: 20px;
     }
-    a:hover {
+    .ar-a:hover {
         background-color: #2fa35fad;
     }
     .first-button {
@@ -61,9 +72,8 @@ const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.prop
     p {
         justify-self: center;
         margin-left: 10px;
-        margin-bottom: 20px;
-        margin: 0 15px 20px 15px;
+        margin: 0 15px 30px 15px;
         text-wrap: pretty;
         width: 90%;
     }
-</style
+</style>
