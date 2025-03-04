@@ -1,5 +1,5 @@
 ---
-const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.props;
+const {image, imageL1, imageL2, title, linkWeb, linkRepo } = Astro.props;
 ---
 <article class="ar-main">
     <img class="ar-main-cover" src={image} alt="porjectos">
@@ -11,7 +11,7 @@ const {image, imageL1, imageL2, title, content, linkWeb, linkRepo } = Astro.prop
     )}
 
     <h3>{title}</h3>
-    <p>{content}</p>
+    <p><slot /></p>
     <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
     <a href={linkRepo} class="ar-a" rel="noreferrer noopener" target="_blank">Código</a>
 </article>

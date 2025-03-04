@@ -17,7 +17,10 @@ import htmlIcon from "../assets/html5.svg";
 import astroDarkIcon from "../assets/astro_dark.svg";
 ---
 
-<Layout title="FuSoraS | Portafolio" description="Mi portafolio de desarrollo y programados web">
+<Layout
+    title="FuSoraS | Portafolio"
+    description="Mi portafolio de desarrollo y programados web"
+>
     <Nav />
     <Header />
     <h2 id="about-me">Sobre mí<span>.</span></h2>
@@ -27,8 +30,13 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         modernas y aplicando buenas prácticas tanto en los sistemas operativos
         Windows y Gnu-Linux.
     </p>
-    <p class="content-m">Como parte de mi interés es contribuir a proyectos open source, realicé una contribución a la documentación de "is-a.dev." creando un fork, Corregí las rutas de las imágenes para asegurar su correcta visualización. Envié un Pull Request (PR) con los cambios.</p>
-    
+    <p class="content-m">
+        Como parte de mi interés es contribuir a proyectos open source, realicé
+        una contribución a la documentación de "is-a.dev." creando un fork,
+        Corregí las rutas de las imágenes para asegurar su correcta
+        visualización. Envié un Pull Request (PR) con los cambios.
+    </p>
+
     <section id="experience">
         <p>Formación y experiencia</p>
         <h2>Formación y experiencia</h2>
@@ -48,41 +56,47 @@ import astroDarkIcon from "../assets/astro_dark.svg";
 
     <h2 id="projects">Projetos</h2>
     <div class="card-projects">
-        <CardProject 
+        <CardProject
             image={blogBg.src}
             imageL1={astroDarkIcon.src}
             imageL2={cssIcon.src}
             title="Blog"
-            content="Página web desarrollada con Astro. Implementé componentes reutilizables de Astro y utilicé las Colecciones de Contenido."
             linkWeb="https://fusoras.github.io/blog/"
             linkRepo="https://github.com/FuSoraS/blog"
-        />
+            >Página web desarrollada con <strong>Astro</strong>. Implementé componentes
+            reutilizables de Astro y utilicé las Colecciones de Contenido.</CardProject
+        >
         <CardProject
             image={fitBg.src}
             imageL1={htmlIcon.src}
             imageL2={cssIcon.src}
             title="FitZone Gym"
-            content="Mi primera página web, en la cual implementé CSS utilizando la metodología BEM. También apliqué técnicas modernas como Nesting CSS, variables de CSS y media queries con condicionales. Utilicé HTML semántico."
             linkWeb="https://fusoras.github.io/page-fake1/"
             linkRepo="https://github.com/FuSoraS/page-fake1"
-        />
+            >Mi primera página web, en la cual implementé CSS utilizando la
+            metodología BEM. También apliqué técnicas modernas como Nesting CSS,
+            variables de CSS y media queries con condicionales. Utilicé HTML
+            semántico.</CardProject
+        >
         <CardProject
             image={linkBg.src}
             imageL1={astroDarkIcon.src}
             imageL2={cssIcon.src}
             title="Link hub"
-            content="Página desarrollada utilizando Astro. Implementé componentes reutilizables de Astro y empleé Node.js junto con npm para la administración de dependencias."
             linkWeb="https://fusoras.github.io/link-hub/"
             linkRepo="https://github.com/FuSoraS/link-hub"
-        />
+            >Página desarrollada utilizando Astro. Implementé componentes
+            reutilizables de Astro y empleé Node.js junto con npm para la
+            administración de dependencias.</CardProject
+        >
     </div>
 
     <footer>2025</footer>
-    
+
     <style>
         :root {
             --h2-m: 50px;
-            --color-link : light-dark(#333, #Fff);
+            --color-link: light-dark(#333, #fff);
             --green: rgb(81 181 103);
             --green-dark: rgb(68, 158, 87);
         }
@@ -105,10 +119,7 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         }
         .card-projects {
             display: grid;
-            grid-template-columns:  repeat(
-                auto-fill,    
-                minmax(200px, 1fr)
-	        );
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
         #projects {
@@ -128,6 +139,9 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         #experience p {
             color: transparent;
             margin-bottom: 20px;
+        }
+        strong {
+            color: var(--green)
         }
     </style>
 </Layout>
