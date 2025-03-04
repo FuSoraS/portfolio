@@ -1,5 +1,4 @@
 ---
-import '@fontsource/lato';
 const { title, description } = Astro.props;
 ---
 <!doctype html>
@@ -23,6 +22,11 @@ const { title, description } = Astro.props;
 		margin: 0 auto;
 		width: min(700px, 90%);
 		height: 100%;
-		font-family: 'Lato', sans-serif;
+		font-family: 'Lato', system-ui, -apple-system, sans-serif;
 	}
+	@font-face {
+	font-family: "Lato";
+	src: url(../assets/font/webfonts/lato-latin-400-normal.woff) format(woff2);
+	font-weight: 400;
+}
 </style>
