@@ -22,12 +22,10 @@ import IconGithub from "../components/icons/Github.astro";
     <HeaderIcon href="https://github.com/FuSoraS">
         <IconGithub class="icon"/>Github
     </HeaderIcon>
-
-    <HeaderIcon href="developer.fusoras@gmail.com">
-        <IconMail class="icon" /> Correo
-    </HeaderIcon>
 </section>
-
+<section class="sc-mail">
+<IconMail class="icon" /> developer.fusoras@gmail.com
+</section>
 <style>
     :root {
         --size-border: 5px solid light-dark(#333, #fff);
@@ -54,6 +52,12 @@ import IconGithub from "../components/icons/Github.astro";
         gap: 10px;
         align-items: center;
         flex-wrap: wrap;
+    }
+    .sc-mail {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 20px;
     }
     .icon {
         color: #fff;
