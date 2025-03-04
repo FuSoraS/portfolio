@@ -1,9 +1,10 @@
 ---
 import HeaderIcon from "./HeaderIcon.astro";
 
-import githubDark from "../assets/github-dark.svg";
-import linkedin from "../assets/linkedin.svg";
-import IconMail from "../components/icons/mail.astro";
+import IconLinkedin from "../components/icons/Linkedin.astro";
+import IconMail from "../components/icons/Mail.astro";
+import IconGithub from "../components/icons/Github.astro";
+
 ---
 <header class="header">
     <h1 class="header-h1">Front-end Developer</h1>
@@ -14,16 +15,17 @@ import IconMail from "../components/icons/mail.astro";
     </p>
 </header>
 <section class="sc-btn">
-    <HeaderIcon icon={linkedin.src} href="https://www.linkedin.com/in/fusoras" className="btn-a">
+    <HeaderIcon href="https://www.linkedin.com/in/fusoras">
+        <IconLinkedin class="icon" />
         Linkedin
     </HeaderIcon>
-    <HeaderIcon icon={githubDark.src} href="https://github.com/FuSoraS" clasName="btn-a">
-        Github
+    <HeaderIcon href="https://github.com/FuSoraS">
+        <IconGithub class="icon"/>Github
     </HeaderIcon>
 
-    <button class="btn-a">
-        <IconMail class="mail" />
-    </button>
+    <HeaderIcon href="developer.fusoras@gmail.com">
+        <IconMail class="icon" /> Correo
+    </HeaderIcon>
 </section>
 
 <style>
@@ -51,8 +53,12 @@ import IconMail from "../components/icons/mail.astro";
         justify-content: center;
         gap: 10px;
         align-items: center;
+        flex-wrap: wrap;
     }
-    .btn-a .mail {
+    .icon {
         color: #fff;
+        width: 22px;
+        height: 22px;
+        aspect-ratio: 22px / 22px;
     }
 </style>
