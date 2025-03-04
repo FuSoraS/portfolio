@@ -1,6 +1,9 @@
 ---
+import HeaderIcon from "./HeaderIcon.astro";
+
 import githubDark from "../assets/github-dark.svg";
 import linkedin from "../assets/linkedin.svg";
+import IconMail from "../components/icons/mail.astro";
 ---
 <header class="header">
     <h1 class="header-h1">Front-end Developer</h1>
@@ -10,19 +13,17 @@ import linkedin from "../assets/linkedin.svg";
         <strong>Gnu-Linux</strong>.
     </p>
 </header>
-<section class="btn">
-    <a
-        class="btn-a"
-        href="https://www.linkedin.com/in/fusoras"
-        rel="noreferrer noopener"
-        target="_blank"><img src={linkedin.src} alt="linkedin" /> Linkedin</a
-    >
-    <a
-        class="btn-a"
-        href="https://github.com/FuSoraS"
-        rel="noreferrer noopener"
-        target="_blank"><img src={githubDark.src} alt="github" /> Github</a
-    >
+<section class="sc-btn">
+    <HeaderIcon icon={linkedin.src} href="https://www.linkedin.com/in/fusoras" className="btn-a">
+        Linkedin
+    </HeaderIcon>
+    <HeaderIcon icon={githubDark.src} href="https://github.com/FuSoraS" clasName="btn-a">
+        Github
+    </HeaderIcon>
+
+    <button class="btn-a">
+        <IconMail class="mail" />
+    </button>
 </section>
 
 <style>
@@ -45,35 +46,13 @@ import linkedin from "../assets/linkedin.svg";
     .header-p strong {
         color: var(--green);
     }
-
-    .btn {
+    .sc-btn {
         display: flex;
         justify-content: center;
         gap: 10px;
-    }
-    .btn-a {
-        display: inline-flex;
         align-items: center;
-        justify-content: flex-start;
-
-        text-decoration: none;
-        color: light-dark(#fff, #fff);
-        background-color: #252525;
-        font-weight: bold;
-        margin-bottom: 120px;
-        border: 2px solid light-dark(var(--green-dark), #fff);
-        padding: 12px 10px;
-        border-radius: 8px;
-        transition: border 0.1s ease-in-out;
-        gap: 0.5rem;
-        max-height: 2.5rem;
-        transition: background-color 0.3s ease-in-out;
     }
-    .btn-a:hover {
-        background-color: var(--green-dark);
-    }
-    .btn-a img {
-        width: 22px;
-        aspect-ratio: 22px / 22px;
+    .btn-a .mail {
+        color: #fff;
     }
 </style>

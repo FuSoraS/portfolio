@@ -1,0 +1,39 @@
+---
+const { icon, href } = Astro.props
+---
+<a
+    class="btn-a"
+    href={href}
+    rel="noreferrer noopener"
+    target="_blank"><img src={icon} alt="linkedin" /> 
+    
+    <slot />
+</a>
+
+<style is:global>
+    .btn-a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        text-decoration: none;
+        color: light-dark(#fff, #fff);
+        background-color: #252525;
+        font-weight: bold;
+        margin-bottom: 120px;
+        border: 2px solid light-dark(var(--green-dark), #fff);
+        padding: 12px 10px;
+        border-radius: 8px;
+        transition: border 0.1s ease-in-out;
+        gap: 0.5rem;
+        max-height: 2.5rem;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .btn-a:hover {
+        background-color: var(--green-dark);
+    }
+    .btn-a img {
+        width: 22px;
+        aspect-ratio: 22px / 22px;
+    }
+</style>
