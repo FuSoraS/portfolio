@@ -4,6 +4,7 @@ import HeaderIcon from "./HeaderIcon.astro";
 import IconLinkedin from "../components/icons/Linkedin.astro";
 import IconMail from "../components/icons/Mail.astro";
 import IconGithub from "../components/icons/Github.astro";
+import BtnCopy from "./BtnCopy.astro";
 
 ---
 <header class="header">
@@ -23,8 +24,10 @@ import IconGithub from "../components/icons/Github.astro";
         <IconGithub class="icon"/>Github
     </HeaderIcon>
 </section>
+
 <section class="sc-mail">
-<IconMail class="icon" /> developer.fusoras@gmail.com
+    <IconMail class="icon" />
+    <BtnCopy />
 </section>
 <style>
     :root {
@@ -56,6 +59,7 @@ import IconGithub from "../components/icons/Github.astro";
     .sc-mail {
         display: flex;
         justify-content: center;
+        align-items: center;
 
         margin-top: 20px;
     }

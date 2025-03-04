@@ -1,0 +1,43 @@
+---
+import IconCopy from './icons/Copy.astro';
+const mailText = "developer.fusoras@gmail.com";
+---
+
+  <p id="mail">{mailText}</p>
+  <button id="btn-copy" title="Copiar">
+    <IconCopy class="mail-icon"/>
+  </button>
+
+<script is:inline>
+  const btnCopy = document.getElementById('btn-copy');
+  const textElement = document.getElementById('mail');
+
+  btnCopy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(textElement.textContent);
+    } catch (err) {
+      console.error('Error al copiar:', err);
+    }
+  });
+</script>
+
+<style>
+    #mail {
+        margin-right: 10px;
+    }
+    #btn-copy {
+        padding: 6px 5px;
+        background-color: #4d4d4d;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color .1s ease;
+    }
+    .mail-icon {
+        height: 15px;
+        width: 15px;
+    }
+  #btn-copy:active {
+    background-color: var(--green);
+  }
+</style>
