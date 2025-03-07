@@ -7,6 +7,8 @@ import CardEducation from "../components/CardEducation.astro";
 import Header from "../components/Header.astro";
 import CardProject from "../components/CardProject.astro";
 
+import IconAstro from "../components/icons/IconAstro.astro";
+
 import workIcon from "../assets/icons-work.png";
 import educationIcon from "../assets/icons-education.png";
 import fitBg from "../assets/fit.webp";
@@ -63,8 +65,12 @@ import astroDarkIcon from "../assets/astro_dark.svg";
             title="Blog"
             linkWeb="https://fusoras.github.io/blog/"
             linkRepo="https://github.com/FuSoraS/blog"
-            >Página web desarrollada con <strong>Astro</strong>. Implementé componentes
-            reutilizables de Astro y utilicé las Colecciones de Contenido.</CardProject
+            >
+            <h3 class="card-projects-title">Blog</h3>
+            <IconAstro class="icon-languages first-icon" />
+            <p class="card-projects-p">Página web desarrollada con <strong>Astro</strong>. Implementé componentes
+            reutilizables de Astro y utilicé las Colecciones de Contenido.</p>
+            </CardProject
         >
         <CardProject
             image={fitBg.src}
@@ -138,6 +144,31 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         #experience p {
             color: transparent;
             margin-bottom: 20px;
+        }
+        .icon-languages {
+            display: inline-flex;
+            justify-content: center;
+
+            height: 25px;
+            width: fit-content;
+            margin: 20px 0 0 8px;
+        }
+        .first-icon {
+            margin-left: 20px;
+        }
+        .card-projects-title {
+            font-size: 26px;
+            margin-top: 10px;
+            text-align: center;
+            color: #91E891;
+            font-weight: bold;
+        }
+        .card-projects-p {
+            justify-self: center;
+            margin-left: 10px;
+            margin: 0 15px 30px 15px;
+            text-wrap: pretty;
+            width: 90%;
         }
         strong {
             color: var(--green)
