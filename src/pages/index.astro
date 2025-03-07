@@ -8,15 +8,14 @@ import Header from "../components/Header.astro";
 import CardProject from "../components/CardProject.astro";
 
 import IconAstro from "../components/icons/IconAstro.astro";
+import IconCss from "../components/icons/Css.astro";
+import IconHtml from "../components/icons/HTML.astro";
 
 import workIcon from "../assets/icons-work.png";
 import educationIcon from "../assets/icons-education.png";
 import fitBg from "../assets/fit.webp";
 import blogBg from "../assets/bg-blog.webp";
 import linkBg from "../assets/link-hub.webp";
-import cssIcon from "../assets/css.svg";
-import htmlIcon from "../assets/html5.svg";
-import astroDarkIcon from "../assets/astro_dark.svg";
 ---
 
 <Layout
@@ -60,39 +59,40 @@ import astroDarkIcon from "../assets/astro_dark.svg";
     <div class="card-projects">
         <CardProject
             image={blogBg.src}
-            imageL1={astroDarkIcon.src}
-            imageL2={cssIcon.src}
-            title="Blog"
             linkWeb="https://fusoras.github.io/blog/"
             linkRepo="https://github.com/FuSoraS/blog"
             >
             <h3 class="card-projects-title">Blog</h3>
             <IconAstro class="icon-languages first-icon" />
+            <IconCss class="icon-languages" />
             <p class="card-projects-p">Página web desarrollada con <strong>Astro</strong>. Implementé componentes
             reutilizables de Astro y utilicé las Colecciones de Contenido.</p>
             </CardProject
         >
         <CardProject
             image={fitBg.src}
-            imageL1={htmlIcon.src}
-            imageL2={cssIcon.src}
-            title="FitZone Gym"
             linkWeb="https://fusoras.github.io/page-fake1/"
             linkRepo="https://github.com/FuSoraS/page-fake1"
-            >Mi primera página web, en la cual implementé CSS utilizando la
+            >
+            <h3 class="card-projects-title">FitZone Gym</h3>
+            <IconHtml class="icon-languages first-icon" />
+            <IconCss class="icon-languages" />
+
+            <p class="card-projects-p">Mi primera página web, en la cual implementé CSS utilizando la
             <strong>metodología BEM</strong>. También apliqué técnicas modernas como <strong>Nesting CSS</strong>,
-            variables de CSS y media queries con condicionales.</CardProject
+            variables de CSS y media queries con condicionales.</p></CardProject
         >
         <CardProject
             image={linkBg.src}
-            imageL1={astroDarkIcon.src}
-            imageL2={cssIcon.src}
-            title="Link hub"
             linkWeb="https://fusoras.github.io/link-hub/"
             linkRepo="https://github.com/FuSoraS/link-hub"
-            >Página desarrollada utilizando Astro. Implementé componentes
+            >
+            <h3 class="card-projects-title">Link hub</h3>
+            <IconAstro class="icon-languages first-icon" />
+            <IconCss class="icon-languages" />
+            <p class="card-projects-p">Página desarrollada utilizando Astro. Implementé componentes
             reutilizables de Astro y empleé Node.js junto con npm para la
-            administración de dependencias.</CardProject
+            administración de dependencias.</p></CardProject
         >
     </div>
 
@@ -151,14 +151,13 @@ import astroDarkIcon from "../assets/astro_dark.svg";
 
             height: 25px;
             width: fit-content;
-            margin: 20px 0 0 8px;
+            margin: 0 0 0 8px;
         }
         .first-icon {
             margin-left: 20px;
         }
         .card-projects-title {
             font-size: 26px;
-            margin-top: 10px;
             text-align: center;
             color: #91E891;
             font-weight: bold;
@@ -166,7 +165,7 @@ import astroDarkIcon from "../assets/astro_dark.svg";
         .card-projects-p {
             justify-self: center;
             margin-left: 10px;
-            margin: 0 15px 30px 15px;
+            margin: 15px 15px 30px 15px;
             text-wrap: pretty;
             width: 90%;
         }
