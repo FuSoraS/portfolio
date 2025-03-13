@@ -10,12 +10,15 @@ import CardProject from "../components/CardProject.astro";
 import IconAstro from "../components/icons/IconAstro.astro";
 import IconCss from "../components/icons/Css.astro";
 import IconHtml from "../components/icons/HTML.astro";
+import IconPodman from "../components/icons/Podman.astro";
+import IconTailwind from "../components/icons/Tailwind.astro";
 
 import workIcon from "../assets/icons-work.png";
 import educationIcon from "../assets/icons-education.png";
 import fitBg from "../assets/fit.webp";
 import blogBg from "../assets/bg-blog.webp";
 import linkBg from "../assets/link-hub.webp";
+import CardTechnologies from "../components/CardTechnologies.astro";
 ---
 
 <Layout
@@ -95,6 +98,15 @@ import linkBg from "../assets/link-hub.webp";
             administración de dependencias.</p></CardProject
         >
     </div>
+    <h2 id="other-tec">Otras tecnologías</h2>
+    <section class="section-tech">
+        <CardTechnologies>
+            <IconPodman class="section-tech-svg"/>
+        </CardTechnologies>
+        <CardTechnologies>
+            <IconTailwind class="section-tech-svg"/>
+        </CardTechnologies>
+    </section>
 
     <footer>2025</footer>
 
@@ -145,6 +157,9 @@ import linkBg from "../assets/link-hub.webp";
             color: transparent;
             margin-bottom: 20px;
         }
+        #other-tec {
+            margin-top: 80px;
+        }
         .icon-languages {
             display: inline-flex;
             justify-content: center;
@@ -171,6 +186,14 @@ import linkBg from "../assets/link-hub.webp";
         }
         strong {
             color: var(--green)
+        }
+        .section-tech {
+            display: flex;
+            gap: 10px;
+        }
+        .section-tech-svg {
+            height: 100%;
+            width: 100%;
         }
     </style>
 </Layout>
