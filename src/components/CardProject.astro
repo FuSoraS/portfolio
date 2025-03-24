@@ -5,7 +5,7 @@ const {image, linkWeb, linkRepo } = Astro.props;
     <img class="ar-main-cover" src={image} alt="porjectos">
     <slot />
     <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
-    <a href={linkRepo} class="ar-a" rel="noreferrer noopener" target="_blank">Código</a>
+    <a href={linkRepo} class="ar-a second-button" rel="noreferrer noopener" target="_blank">Código</a>
 </article>
 
 <style>
@@ -34,11 +34,19 @@ const {image, linkWeb, linkRepo } = Astro.props;
         box-sizing: border-box;
         margin-right: 10px;
         margin-bottom: 20px;
+
+        transition: background-color .3s;
     }
     .ar-a:hover {
         background-color: #2fa35fad;
     }
     .first-button {
         margin-left: 20px;
+    }
+    .second-button {
+        color: light-dark(#333,#fff);
+        background-color: initial;
+        border-right: 2px solid #2fa35fad;
+        border-bottom: 2px solid #2fa35fad;
     }
 </style>
