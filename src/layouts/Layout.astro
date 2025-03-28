@@ -6,10 +6,23 @@ const { title, description } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+
 		<link rel="icon" href={`/favicon.svg`} type="image/svg+xml">
 		<meta name="google-site-verification" content="l0My55aihzJm_JtopsqJ5AvG-_KkYURzqQy3B03_UUE" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="FuSoraS"/>
+		<meta name="twitter:title" content="FuSoraS - Portafolio"/>
+		<meta name="twitter:description" content="Evento de boxeo aficionados entre streamers y greadores de contenido, organizado por ibai Llanos"/>
+
+		<meta property="og:title" content="FuSoraS - Portafolio">
+		<meta property="og:image" content="https://fusoras.is-a.dev/og.jpg">
+		<meta property="og:description" content="Desarrollo web, Fron-end, Soporte tecnico">
+		<meta property="og:url" content="https://fusoras.is-a.dev/"/>
+		<meta property="og:locale" content="es_ES" />
+
 		<meta name="description" content={`${description}`}>
-		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
