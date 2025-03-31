@@ -30,15 +30,17 @@ const { title, description } = Astro.props;
 </html>
 
 <style>
+	:root {
+		--h2-m: 50px;
+		--color-link: light-dark(#333, #fff);
+		--green: rgb(81 181 103);
+		--green-dark: rgb(68, 158, 87);
+		--font-content: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
+	}
 	html,
 	body {
 		margin: 0 auto;
 		width: min(700px, 90%);
-		font-family: 'Lato', system-ui, -apple-system, sans-serif;
+		font-family: var(--font-content);
 	}
-	@font-face {
-	font-family: "Lato";
-	src: url(../assets/font/webfonts/lato-latin-400-normal.woff) format(woff2);
-	font-weight: 400;
-}
 </style>
