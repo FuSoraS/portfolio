@@ -3,10 +3,11 @@ import IconCopy from './icons/Copy.astro';
 const mailText = "developer.fusoras@gmail.com";
 ---
 
-  <p id="mail">{mailText}</p>
+<label id="mail">{mailText}
   <button id="btn-copy" title="Copiar">
     <IconCopy class="mail-icon"/>
   </button>
+</label>
 
 <script is:inline>
   const btnCopy = document.getElementById('btn-copy');
