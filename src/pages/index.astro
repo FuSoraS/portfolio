@@ -18,6 +18,7 @@ import educationIcon from "../assets/icons-education.png";
 import fitBg from "../assets/fit.webp";
 import blogBg from "../assets/bg-blog.webp";
 import linkBg from "../assets/link-hub.webp";
+import demoPT from "../assets/demo-PT.webp";
 import CardTechnologies from "../components/CardTechnologies.astro";
 import CardProjectDemo from "../components/CardProjectDemo.astro";
 ---
@@ -99,13 +100,13 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             administración de dependencias.</p></CardProject
         >
         <CardProjectDemo
-            image=""
-            linkWeb="https://fusoras.github.io/portfolio/"
+            image={demoPT.src}
+            linkWeb="https://youtu.be/U_7Vx_W1v9k"
             >
-            <h3 class="card-projects-title">Demo - proyecto</h3>
+            <h3 class="card-projects-title">Proyecto de titulación</h3>
             <IconHtml class="icon-languages first-icon" />
             <IconCss class="icon-languages" />
-            <p class="card-projects-p">Mejorar la accesibilidad</p>
+            <p class="card-projects-p">Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.</p>
         </CardProjectDemo>
 
     </div>
