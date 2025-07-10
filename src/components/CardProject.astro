@@ -28,7 +28,6 @@ const {image, linkWeb, linkRepo } = Astro.props;
         background-color: light-dark(#237746,#2FA35F);
         text-decoration: none;
         color: light-dark(#fff,#fff);
-        border-radius: 10px;
         font-weight: bold;
         padding: 10px 15px;
         box-sizing: border-box;
@@ -37,16 +36,15 @@ const {image, linkWeb, linkRepo } = Astro.props;
 
         transition: background-color .3s;
     }
-    .ar-a:hover {
+    .first-button:hover {
         background-color: light-dark(#43c278ad,#2fa35fad);
     }
     .first-button {
+        border-radius: 10px;
         margin-left: 20px;
     }
     .second-button {
         color: light-dark(#333,#fff);
         background-color: initial;
-        border-right: 2px solid #2fa35fad;
-        border-bottom: 2px solid #2fa35fad;
     }
 </style>
