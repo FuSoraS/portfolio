@@ -19,6 +19,7 @@ import fitBg from "../assets/fit.webp";
 import blogBg from "../assets/bg-blog.webp";
 import linkBg from "../assets/link-hub.webp";
 import CardTechnologies from "../components/CardTechnologies.astro";
+import CardProjectDemo from "../components/CardProjectDemo.astro";
 ---
 
 <Layout
@@ -97,6 +98,16 @@ import CardTechnologies from "../components/CardTechnologies.astro";
             reutilizables de Astro y empleé Node.js junto con npm para la
             administración de dependencias.</p></CardProject
         >
+        <CardProjectDemo
+            image=""
+            linkWeb="https://fusoras.github.io/portfolio/"
+            >
+            <h3 class="card-projects-title">Demo - proyecto</h3>
+            <IconHtml class="icon-languages first-icon" />
+            <IconCss class="icon-languages" />
+            <p class="card-projects-p">Mejorar la accesibilidad</p>
+        </CardProjectDemo>
+
     </div>
     <h2 id="other-tec">Otras tecnologías</h2>
     <section class="section-tech">
