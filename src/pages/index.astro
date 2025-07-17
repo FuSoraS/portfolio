@@ -61,7 +61,19 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
     </section>
 
     <h2 id="projects">Projetos</h2>
+    
     <div class="card-projects">
+        
+        <CardProjectDemo
+            image={demoPT.src}
+            linkWeb="https://youtu.be/U_7Vx_W1v9k"
+            >
+            <h3 class="card-projects-title">Proyecto de titulación</h3>
+            <IconHtml class="icon-languages first-icon" />
+            <IconCss class="icon-languages" />
+            <p class="card-projects-p">Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.</p>
+        </CardProjectDemo>
+
         <CardProject
             image={blogBg.src}
             linkWeb="https://fusoras.github.io/blog/"
@@ -99,15 +111,6 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             reutilizables de Astro y empleé Node.js junto con npm para la
             administración de dependencias.</p></CardProject
         >
-        <CardProjectDemo
-            image={demoPT.src}
-            linkWeb="https://youtu.be/U_7Vx_W1v9k"
-            >
-            <h3 class="card-projects-title">Proyecto de titulación</h3>
-            <IconHtml class="icon-languages first-icon" />
-            <IconCss class="icon-languages" />
-            <p class="card-projects-p">Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.</p>
-        </CardProjectDemo>
 
     </div>
     <h2 id="other-tec">Otras tecnologías</h2>
