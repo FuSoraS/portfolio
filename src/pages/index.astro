@@ -28,20 +28,26 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
     description="Mi portafolio de desarrollo y programados web"
 >
     <Nav />
-    <Header />
-    <h2 id="about-me">Sobre mí<span>.</span></h2>
-    <p class="content-m">
-        +2 años de formación como Técnico en Análisis de <strong>Programación</strong>.
-        Experiencia en desarrollo <strong>web colaborativo</strong>, aprendiendo tecnologías
-        modernas y aplicando buenas prácticas tanto en los sistemas operativos
-        Windows y Gnu-Linux.
-    </p>
-    <p class="content-m">
-        Como parte de mi interés es contribuir a proyectos open source, realicé
-        una contribución a la documentación de "is-a.dev." creando un fork,
-        Corregí las rutas de las imágenes para asegurar su correcta
-        visualización. Envié un Pull Request (PR) con los cambios.
-    </p>
+    <section id="home">
+        <Header />
+    </section>
+
+    <section id="section-about-me">
+        <h2 id="about-me">Sobre mí<span>.</span></h2>
+        <p class="content-m">
+            +2 años de formación como Técnico en Análisis de <strong>Programación</strong>.
+            Experiencia en desarrollo <strong>web colaborativo</strong>, aprendiendo tecnologías
+            modernas y aplicando buenas prácticas tanto en los sistemas operativos
+            Windows y Gnu-Linux.
+        </p>
+        <p class="content-m">
+            Como parte de mi interés es contribuir a proyectos open source, realicé
+            una contribución a la documentación de "is-a.dev." creando un fork,
+            Corregí las rutas de las imágenes para asegurar su correcta
+            visualización. Envié un Pull Request (PR) con los cambios.
+        </p>
+    </section>
+
 
     <section id="experience">
         <p>Formación y experiencia</p>
@@ -60,59 +66,63 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
         />
     </section>
 
-    <h2 id="projects">Projetos</h2>
-    
-    <div class="card-projects">
+    <section id="section-projects">
+        <h2 id="projects">Projetos</h2>
         
-        <CardProjectDemo
-            image={demoPT.src}
-            linkWeb="https://youtu.be/U_7Vx_W1v9k"
-            >
-            <h3 class="card-projects-title">Proyecto de titulación</h3>
-            <IconHtml class="icon-languages first-icon" />
-            <IconCss class="icon-languages" />
-            <p class="card-projects-p">Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.</p>
-        </CardProjectDemo>
+        <div class="card-projects">
+            
+            <CardProjectDemo
+                image={demoPT.src}
+                linkWeb="https://youtu.be/U_7Vx_W1v9k"
+                >
+                <h3 class="card-projects-title">Proyecto de titulación</h3>
+                <IconHtml class="icon-languages first-icon" />
+                <IconCss class="icon-languages" />
+                <p class="card-projects-p">Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.</p>
+            </CardProjectDemo>
 
-        <CardProject
-            image={blogBg.src}
-            linkWeb="https://fusoras.github.io/blog/"
-            linkRepo="https://github.com/FuSoraS/blog"
+            <CardProject
+                image={blogBg.src}
+                linkWeb="https://fusoras.github.io/blog/"
+                linkRepo="https://github.com/FuSoraS/blog"
+                >
+                <h3 class="card-projects-title">Blog</h3>
+                <IconAstro class="icon-languages first-icon" />
+                <IconCss class="icon-languages" />
+                <p class="card-projects-p">Página web desarrollada con <strong>Astro</strong>. Implementé componentes
+                reutilizables de Astro y utilicé las Colecciones de Contenido.</p>
+                </CardProject
             >
-            <h3 class="card-projects-title">Blog</h3>
-            <IconAstro class="icon-languages first-icon" />
-            <IconCss class="icon-languages" />
-            <p class="card-projects-p">Página web desarrollada con <strong>Astro</strong>. Implementé componentes
-            reutilizables de Astro y utilicé las Colecciones de Contenido.</p>
-            </CardProject
-        >
-        <CardProject
-            image={fitBg.src}
-            linkWeb="https://fusoras.github.io/page-fake1/"
-            linkRepo="https://github.com/FuSoraS/page-fake1"
-            >
-            <h3 class="card-projects-title">FitZone Gym</h3>
-            <IconHtml class="icon-languages first-icon" />
-            <IconCss class="icon-languages" />
+            <CardProject
+                image={fitBg.src}
+                linkWeb="https://fusoras.github.io/page-fake1/"
+                linkRepo="https://github.com/FuSoraS/page-fake1"
+                >
+                <h3 class="card-projects-title">FitZone Gym</h3>
+                <IconHtml class="icon-languages first-icon" />
+                <IconCss class="icon-languages" />
 
-            <p class="card-projects-p">Mi primera página web, en la cual implementé CSS utilizando la
-            <strong>metodología BEM</strong>. También apliqué técnicas modernas como <strong>Nesting CSS</strong>,
-            variables de CSS y media queries con condicionales.</p></CardProject
-        >
-        <CardProject
-            image={linkBg.src}
-            linkWeb="https://fusoras.github.io/link-hub/"
-            linkRepo="https://github.com/FuSoraS/link-hub"
+                <p class="card-projects-p">Mi primera página web, en la cual implementé CSS utilizando la
+                <strong>metodología BEM</strong>. También apliqué técnicas modernas como <strong>Nesting CSS</strong>,
+                variables de CSS y media queries con condicionales.</p></CardProject
             >
-            <h3 class="card-projects-title">Link hub</h3>
-            <IconAstro class="icon-languages first-icon" />
-            <IconCss class="icon-languages" />
-            <p class="card-projects-p">Página desarrollada utilizando Astro. Implementé componentes
-            reutilizables de Astro y empleé Node.js junto con npm para la
-            administración de dependencias.</p></CardProject
-        >
+            <CardProject
+                image={linkBg.src}
+                linkWeb="https://fusoras.github.io/link-hub/"
+                linkRepo="https://github.com/FuSoraS/link-hub"
+                >
+                <h3 class="card-projects-title">Link hub</h3>
+                <IconAstro class="icon-languages first-icon" />
+                <IconCss class="icon-languages" />
+                <p class="card-projects-p">Página desarrollada utilizando Astro. Implementé componentes
+                reutilizables de Astro y empleé Node.js junto con npm para la
+                administración de dependencias.</p></CardProject
+            >
 
-    </div>
+        </div>
+
+    </section>
+
     <h2 id="other-tec">Otras tecnologías</h2>
     <section class="section-tech">
         <CardTechnologies title="Podman">
@@ -204,4 +214,23 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             width: 100%;
         }
     </style>
+    <script is:inline>
+        const section = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        window.onscroll = () => {
+            section.forEach(sect => {
+                let top = window.scrollY;
+                let offset = sect.offsetTop;
+                let height = sect.offsetHeight;
+                let id = sect.getAttribute('id');
+
+                if(top >= offset && top < offset + height){
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('nav a[href*=' + id + ']').classList.add('active');
+                    })
+                }
+            })
+        }
+    </script>
 </Layout>
