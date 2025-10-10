@@ -13,8 +13,8 @@ import IconHtml from "../components/icons/HTML.astro";
 import IconPodman from "../components/icons/Podman.astro";
 import IconTailwind from "../components/icons/Tailwind.astro";
 
-import workIcon from "../assets/icons-work.png";
-import educationIcon from "../assets/icons-education.png";
+import IconsWork from "../components/icons/IconsWork.astro";
+import IconEducation from "../components/icons/IconEducation.astro";
 import fitBg from "../assets/fit.webp";
 import blogBg from "../assets/bg-blog.webp";
 import linkBg from "../assets/link-hub.webp";
@@ -52,13 +52,13 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
     <section id="experience">
         <h2>Formación y experiencia</h2>
         <CardEducation
-            image={workIcon.src}
+            icon={IconsWork}
             title="Soporte técnico"
             date="2025 Enero - 2025 Abril"
             content="Instalación de sistemas operativos, gestión de cableado de red y mantenimiento básico de equipos informáticos."
         />
         <CardEducation
-            image={educationIcon.src}
+            icon={IconEducation}
             title="Analista Programador"
             date="2023 - 2025"
             content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
@@ -179,13 +179,11 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
         #experience {
             margin-bottom: 110px;
         }
-        #experience p {
-            color: transparent;
-            margin-bottom: 20px;
-        }
         #other-tech {
             margin-top: 80px;
         }
+
+        /* Section education */
 
         /* Section about me */
         .content-m {
