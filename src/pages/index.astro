@@ -126,14 +126,17 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
 
     </section>
 
-    <h2 id="other-tec">Otras tecnologías</h2>
-    <section class="section-tech">
-        <CardTechnologies title="Podman">
-            <IconPodman class="section-tech-svg"/>
-        </CardTechnologies>
-        <CardTechnologies title="Tailwind">
-            <IconTailwind class="section-tech-svg"/>
-        </CardTechnologies>
+    <section class="section-tech" id="other-tech">
+        <h2>Otras tecnologías</h2>
+
+        <div class="tech-card-container">
+            <CardTechnologies title="Podman">
+                <IconPodman class="tech-card-svg"/>
+            </CardTechnologies>
+            <CardTechnologies title="Tailwind">
+                <IconTailwind class="tech-card-svg"/>
+            </CardTechnologies>
+        </div>
     </section>
 
     <footer>2025</footer>
@@ -176,7 +179,7 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             color: transparent;
             margin-bottom: 20px;
         }
-        #other-tec {
+        #other-tech {
             margin-top: 80px;
         }
 
@@ -222,11 +225,14 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
         }
 
         /* Section tech */
-        .section-tech {
+        .section-tech h2 {
+            margin-bottom: 2rem;
+        }
+        .tech-card-container {
             display: flex;
             gap: 10px;
         }
-        .section-tech-svg {
+        .tech-card-svg {
             height: 100%;
             width: 100%;
         }
