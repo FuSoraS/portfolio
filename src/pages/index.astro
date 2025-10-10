@@ -50,7 +50,6 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
 
 
     <section id="experience">
-        <p>Formación y experiencia</p>
         <h2>Formación y experiencia</h2>
         <CardEducation
             image={workIcon.src}
@@ -67,7 +66,7 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
     </section>
 
     <section id="section-projects">
-        <h2 id="projects">Projetos</h2>
+        <h2 class="section-title">Projetos</h2>
         
         <div class="card-projects">
             
@@ -156,8 +155,8 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
-        #projects {
-            margin-top: 50px;
+        section {
+            padding-top: 25px;
         }
         #about-me {
             margin-top: 128px;
@@ -168,7 +167,7 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             color: var(--green-dark);
         }
         #experience {
-            margin-bottom: 150px;
+            margin-bottom: 110px;
         }
         #experience p {
             color: transparent;
@@ -187,6 +186,11 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
         }
         .first-icon {
             margin-left: 20px;
+        }
+
+        /* Section proyect */
+        .section-title {
+            margin-bottom: 40px;
         }
         .card-projects-title {
             font-size: 26px;
