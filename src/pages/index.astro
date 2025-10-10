@@ -73,9 +73,10 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             <CardProjectDemo
                 image={demoPT.src}
                 linkWeb="https://youtu.be/U_7Vx_W1v9k"
+                class="card-project-container"
                 >
                 <h3 class="card-projects-title">Proyecto de titulación</h3>
-                <IconHtml class="icon-languages first-icon" />
+                <IconHtml class="icon-languages" />
                 <IconCss class="icon-languages" />
                 <p class="card-projects-p">Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.</p>
             </CardProjectDemo>
@@ -84,9 +85,10 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
                 image={blogBg.src}
                 linkWeb="https://fusoras.github.io/blog/"
                 linkRepo="https://github.com/FuSoraS/blog"
+                class="card-project-container"
                 >
                 <h3 class="card-projects-title">Blog</h3>
-                <IconAstro class="icon-languages first-icon" />
+                <IconAstro class="icon-languages" />
                 <IconCss class="icon-languages" />
                 <p class="card-projects-p">Página web desarrollada con <strong>Astro</strong>. Implementé componentes
                 reutilizables de Astro y utilicé las Colecciones de Contenido.</p>
@@ -96,9 +98,10 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
                 image={fitBg.src}
                 linkWeb="https://fusoras.github.io/page-fake1/"
                 linkRepo="https://github.com/FuSoraS/page-fake1"
+                class="card-project-container"
                 >
                 <h3 class="card-projects-title">FitZone Gym</h3>
-                <IconHtml class="icon-languages first-icon" />
+                <IconHtml class="icon-languages" />
                 <IconCss class="icon-languages" />
 
                 <p class="card-projects-p">Mi primera página web, en la cual implementé CSS utilizando la
@@ -109,9 +112,10 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
                 image={linkBg.src}
                 linkWeb="https://fusoras.github.io/link-hub/"
                 linkRepo="https://github.com/FuSoraS/link-hub"
+                class="card-project-container"
                 >
                 <h3 class="card-projects-title">Link hub</h3>
-                <IconAstro class="icon-languages first-icon" />
+                <IconAstro class="icon-languages" />
                 <IconCss class="icon-languages" />
                 <p class="card-projects-p">Página desarrollada utilizando Astro. Implementé componentes
                 reutilizables de Astro y empleé Node.js junto con npm para la
@@ -203,18 +207,19 @@ import CardProjectDemo from "../components/CardProjectDemo.astro";
             text-wrap: pretty;
             width: 90%;
         }
+
         .icon-languages {
             display: inline-flex;
             justify-content: center;
+            align-items: center;
 
             height: 25px;
-            width: fit-content;
+            width: 25px;
             margin: 0 0 0 8px;
         }
-        .first-icon {
+        .icon-languages:first-of-type {
             margin-left: 20px;
         }
-
 
         /* Section tech */
         .section-tech {
