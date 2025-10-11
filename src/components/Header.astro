@@ -21,12 +21,13 @@ import BtnCopy from "./BtnCopy.astro";
         Linkedin
     </HeaderIcon>
     <HeaderIcon href="https://github.com/FuSoraS">
-        <IconGithub class="icon" priority />Github
+        <IconGithub class="icon" priority />
+        Github
     </HeaderIcon>
 </section>
 
 <section class="sc-mail">
-    <IconMail class="icon" />
+    <IconMail class="icon-mail" />
     <BtnCopy />
 </section>
 <style>
@@ -67,7 +68,10 @@ import BtnCopy from "./BtnCopy.astro";
         color: light-dark(#333, #fff);
         width: 22px;
         height: 22px;
-        aspect-ratio: 22px / 22px;
-        margin-right: 8px;
+        aspect-ratio: 22 / 22;
+    }
+    .icon-mail {
+        width: 25px;
+        height: 25px;
     }
 </style>
