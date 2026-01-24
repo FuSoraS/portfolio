@@ -16,8 +16,7 @@ import IconTailwind from "../components/icons/Tailwind.astro";
 import IconsWork from "../components/icons/IconsWork.astro";
 import IconEducation from "../components/icons/IconEducation.astro";
 import fitBg from "../assets/fit.webp";
-import blogBg from "../assets/bg-blog.webp";
-import linkBg from "../assets/link-hub.webp";
+import blogBg2 from "../assets/bg-blog-2.webp"
 import demoPT from "../assets/demo-PT.webp";
 import CardTechnologies from "../components/CardTechnologies.astro";
 import CardProjectDemo from "../components/CardProjectDemo.astro";
@@ -83,7 +82,7 @@ import WebComponent from "../components/icons/WebComponent.astro";
             </CardProjectDemo>
 
             <CardProject
-                image={blogBg.src}
+                image={blogBg2.src}
                 linkWeb="https://fusoras.github.io/blog/"
                 linkRepo="https://github.com/FuSoraS/blog"
                 class="card-project-container"
@@ -93,8 +92,7 @@ import WebComponent from "../components/icons/WebComponent.astro";
                 <IconCss class="icon-languages" />
                 <p class="card-projects-p">Página web desarrollada con <strong>Astro</strong>. Implementé componentes
                 reutilizables de Astro y utilicé las Colecciones de Contenido.</p>
-                </CardProject
-            >
+            </CardProject>
             <CardProject
                 image={fitBg.src}
                 linkWeb="https://fusoras.github.io/page-fake1/"
@@ -108,22 +106,8 @@ import WebComponent from "../components/icons/WebComponent.astro";
 
                 <p class="card-projects-p">Mi primera página web, en la cual implementé CSS utilizando la
                 <strong>metodología BEM</strong>. También apliqué técnicas modernas como <strong>Nesting CSS</strong>,
-                variables de CSS y media queries con condicionales.</p></CardProject
-            >
-            <CardProject
-                image={linkBg.src}
-                linkWeb="https://fusoras.github.io/link-hub/"
-                linkRepo="https://github.com/FuSoraS/link-hub"
-                class="card-project-container"
-                >
-                <h3 class="card-projects-title">Link hub</h3>
-                <IconAstro class="icon-languages" />
-                <IconCss class="icon-languages" />
-                <p class="card-projects-p">Página desarrollada utilizando Astro. Implementé componentes
-                reutilizables de Astro y empleé Node.js junto con npm para la
-                administración de dependencias.</p></CardProject
-            >
-
+                variables de CSS y media queries con condicionales.</p>
+            </CardProject>
         </div>
 
     </section>
