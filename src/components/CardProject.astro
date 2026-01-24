@@ -3,9 +3,11 @@ const {image, linkWeb, linkRepo } = Astro.props;
 ---
 <article class="ar-main">
     <img class="ar-main-cover" src={image} alt="porjectos">
-    <slot />
-    <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
-    <a href={linkRepo} class="ar-a second-button" rel="noreferrer noopener" target="_blank">Código</a>
+    <div>
+        <slot />
+        <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
+        <a href={linkRepo} class="ar-a second-button" rel="noreferrer noopener" target="_blank">Código</a>
+    </div>
 </article>
 
 <style>
@@ -41,10 +43,12 @@ const {image, linkWeb, linkRepo } = Astro.props;
     }
     .first-button {
         border-radius: 10px;
-        margin-left: 20px;
     }
     .second-button {
         color: light-dark(#333,#fff);
         background-color: initial;
+    }
+    div {
+        padding: 20px;
     }
 </style>
