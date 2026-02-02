@@ -1,0 +1,30 @@
+---
+import CardTechnologies from "@/components/CardTechnologies.astro";
+import IconPodman from "@/components/icons/IconPodman.astro";
+import IconTailwind from "@/components/icons/IconTailwind.astro";
+---
+
+<h2>Otras tecnologías</h2>
+
+<div class="tech-card-container">
+    <CardTechnologies title="Podman">
+        <IconPodman class="tech-card-svg" />
+    </CardTechnologies>
+    <CardTechnologies title="Tailwind">
+        <IconTailwind class="tech-card-svg" />
+    </CardTechnologies>
+</div>
+<style>
+    .section-tech h2 {
+        margin-bottom: 2rem;
+    }
+    .tech-card-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .tech-card-svg {
+        height: 100%;
+        width: 100%;
+    }
+</style>

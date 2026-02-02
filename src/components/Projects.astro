@@ -1,0 +1,97 @@
+---
+import CardProject from "@/components/CardProject.astro";
+import CardProjectDemo from "@/components/CardProjectDemo.astro";
+import demoPT from "@/assets/demo-PT.webp";
+import blogBg2 from "@/assets/bg-blog-2.webp";
+import fitBg from "@/assets/fit.webp";
+import IconHtml from "@/components/icons/HTML.astro";
+import IconCss from "@/components/icons/Css.astro";
+import IconAstro from "@/components/icons/IconAstro.astro";
+import WebComponent from "@/components/icons/WebComponent.astro";
+---
+
+<h2 class="section-projects-title">Proyectos</h2>
+
+<div class="card-projects">
+    <CardProjectDemo
+        image={demoPT.src}
+        linkWeb="https://youtu.be/U_7Vx_W1v9k"
+        class="card-project-container"
+    >
+        <h3 class="card-projects-title">Proyecto de titulación</h3>
+        <IconHtml class="icon-languages" />
+        <IconCss class="icon-languages" />
+        <p class="card-projects-p">
+            Página inclusiva con modo oscuro, control de texto y animaciones
+            desactivables para mejorar la accesibilidad.
+        </p>
+    </CardProjectDemo>
+
+    <CardProject
+        image={blogBg2.src}
+        linkWeb="https://fusoras.github.io/blog/"
+        linkRepo="https://github.com/FuSoraS/blog"
+        class="card-project-container"
+    >
+        <h3 class="card-projects-title">Blog</h3>
+        <IconAstro class="icon-languages" />
+        <IconCss class="icon-languages" />
+        <p class="card-projects-p">
+            Página web desarrollada con <strong>Astro</strong>. Implementé
+            componentes reutilizables de Astro y utilicé las Colecciones de
+            Contenido.
+        </p>
+    </CardProject>
+    <CardProject
+        image={fitBg.src}
+        linkWeb="https://fusoras.github.io/page-fake1/"
+        linkRepo="https://github.com/FuSoraS/page-fake1"
+        class="card-project-container"
+    >
+        <h3 class="card-projects-title">FitZone Gym</h3>
+        <IconHtml class="icon-languages" />
+        <IconCss class="icon-languages" />
+        <WebComponent class="icon-languages" />
+
+        <p class="card-projects-p">
+            Mi primera página web, en la cual implementé CSS utilizando la
+            <strong>metodología BEM</strong>. También apliqué técnicas modernas
+            como <strong>Nesting CSS</strong>, variables de CSS y media queries
+            con condicionales.
+        </p>
+    </CardProject>
+</div>
+<style>
+            .card-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .section-projects-title {
+            margin-bottom: 40px;
+        }
+        .card-projects-title {
+            font-size: 26px;
+            text-align: center;
+            color: light-dark(#2d9759, #91e891);
+            font-weight: bold;
+        }
+        .card-projects-p {
+            justify-self: center;
+            margin: 15px 0 30px 0;
+            text-wrap: pretty;
+        }
+
+        .icon-languages {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 25px;
+            width: 25px;
+            margin: 0 0 0 8px;
+        }
+        .icon-languages:first-of-type {
+            margin-left: 0;
+        }
+</style>
