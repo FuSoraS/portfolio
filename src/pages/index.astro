@@ -8,6 +8,7 @@ import AboutMe from "@/components/AboutMe.astro";
 import Projects from "@/components/Projects.astro";
 import Tech from "@/components/Tech.astro";
 import Experience from "@/components/Experience.astro";
+import Footer from "@/components/Footer.astro";
 ---
 
 <Layout
@@ -15,6 +16,7 @@ import Experience from "@/components/Experience.astro";
     description="Mi portafolio de desarrollo y programación web"
 >
     <Nav />
+
     <section id="home">
         <Header />
     </section>
@@ -35,7 +37,7 @@ import Experience from "@/components/Experience.astro";
         <Tech />
     </section>
 
-    <footer>2025</footer>
+    <Footer />
 
     <style is:global>
         html {
