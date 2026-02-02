@@ -1,9 +1,13 @@
 ---
+import { Picture } from "astro:assets";
 import CardProject from "@/components/CardProject.astro";
 import CardProjectDemo from "@/components/CardProjectDemo.astro";
-import demoPT from "@/assets/demo-PT.webp";
-import blogBg2 from "@/assets/bg-blog-2.webp";
-import fitBg from "@/assets/fit.webp";
+
+import demoPT from "@/assets/proyecto-titulacion-bg.webp";
+import blogBg2 from "@/assets/blog-bg.webp";
+import fitBg from "@/assets/fit-bg.webp";
+import happyBirthday from "@/assets/happy-birthday-bg.webp";
+
 import IconHtml from "@/components/icons/HTML.astro";
 import IconCss from "@/components/icons/Css.astro";
 import IconAstro from "@/components/icons/IconAstro.astro";
@@ -16,6 +20,7 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
 
 <div class="card-projects">
     <CardProject linkRepo="https://github.com/FuSoraS/birthday-26">
+        <Picture src={happyBirthday} formats={['avif', 'webp']} alt="Imagen" class="ar-main-cover" slot="image" />
         <h3>Happy birthday</h3>
         <IconAstro class="icon-languages" />
         <IconTailwind class="icon-languages" />
@@ -25,7 +30,8 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
             conectan cada página. Optimicé el rendimiento y la experiencia de usuario migrando la base de React a Svelte.
         </p>
     </CardProject>
-    <CardProjectDemo image={demoPT.src} linkWeb="https://youtu.be/U_7Vx_W1v9k">
+    <CardProjectDemo linkWeb="https://youtu.be/U_7Vx_W1v9k">
+        <Picture src={demoPT} formats={['avif', 'webp']} alt="Proyecto de titulación" class="ar-main-cover" slot="image" />
         <h3>Proyecto de titulación</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
@@ -36,10 +42,10 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
     </CardProjectDemo>
 
     <CardProject
-        image={blogBg2.src}
         linkWeb="https://fusoras.github.io/blog/"
         linkRepo="https://github.com/FuSoraS/blog"
     >
+        <Picture src={blogBg2} formats={['avif', 'webp']} alt="Blog" class="ar-main-cover" slot="image" />
         <h3>Blog</h3>
         <IconAstro class="icon-languages" />
         <IconCss class="icon-languages" />
@@ -50,10 +56,10 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
         </p>
     </CardProject>
     <CardProject
-        image={fitBg.src}
         linkWeb="https://fusoras.github.io/page-fake1/"
         linkRepo="https://github.com/FuSoraS/page-fake1"
     >
+        <Picture src={fitBg} formats={['avif', 'webp']} alt="FitZone Gym" class="ar-main-cover" slot="image" />
         <h3>FitZone Gym</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
@@ -99,5 +105,12 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
     }
     .icon-languages:first-of-type {
         margin-left: 0;
+    }
+
+    .ar-main-cover {
+        height: 200px;
+        width: 100%;
+        margin: auto;
+        object-fit: cover;
     }
 </style>

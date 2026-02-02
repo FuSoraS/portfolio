@@ -1,8 +1,8 @@
 ---
-const {image, linkWeb, linkRepo } = Astro.props;
+const { linkWeb, linkRepo } = Astro.props;
 ---
 <article class="ar-main">
-    { image ? <img class="ar-main-cover" src={image} alt="porjectos"> : null }
+    <slot name="image" />
     <div class="content">
         <slot />
         <div class="links-container">
@@ -21,12 +21,6 @@ const {image, linkWeb, linkRepo } = Astro.props;
         overflow: hidden;
     }
 
-    .ar-main-cover {
-        height: 200px;
-        width: 100%;
-        margin: auto;
-        object-fit: cover;
-    }
     .ar-a {
         display: inline-block;
         background-color: light-dark(#237746,#2FA35F);
