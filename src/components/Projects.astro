@@ -8,17 +8,25 @@ import IconHtml from "@/components/icons/HTML.astro";
 import IconCss from "@/components/icons/Css.astro";
 import IconAstro from "@/components/icons/IconAstro.astro";
 import WebComponent from "@/components/icons/WebComponent.astro";
+import IconTailwind from "@/components/icons/IconTailwind.astro";
+import IconSvelte from "@/components/icons/IconSvelte.astro";
 ---
 
 <h2 class="section-projects-title">Proyectos</h2>
 
 <div class="card-projects">
-    <CardProjectDemo
-        image={demoPT.src}
-        linkWeb="https://youtu.be/U_7Vx_W1v9k"
-        class="card-project-container"
-    >
-        <h3 class="card-projects-title">Proyecto de titulación</h3>
+    <CardProject linkRepo="https://github.com/FuSoraS/birthday-26">
+        <h3>Happy birthday</h3>
+        <IconAstro class="icon-languages" />
+        <IconTailwind class="icon-languages" />
+        <IconSvelte class="icon-languages" />
+        <p>
+            Transformé la experiencia visual con animaciones fluidas que
+            conectan cada página. Optimicé el rendimiento y la experiencia de usuario migrando la base de React a Svelte.
+        </p>
+    </CardProject>
+    <CardProjectDemo image={demoPT.src} linkWeb="https://youtu.be/U_7Vx_W1v9k">
+        <h3>Proyecto de titulación</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
         <p class="card-projects-p">
@@ -31,9 +39,8 @@ import WebComponent from "@/components/icons/WebComponent.astro";
         image={blogBg2.src}
         linkWeb="https://fusoras.github.io/blog/"
         linkRepo="https://github.com/FuSoraS/blog"
-        class="card-project-container"
     >
-        <h3 class="card-projects-title">Blog</h3>
+        <h3>Blog</h3>
         <IconAstro class="icon-languages" />
         <IconCss class="icon-languages" />
         <p class="card-projects-p">
@@ -46,9 +53,8 @@ import WebComponent from "@/components/icons/WebComponent.astro";
         image={fitBg.src}
         linkWeb="https://fusoras.github.io/page-fake1/"
         linkRepo="https://github.com/FuSoraS/page-fake1"
-        class="card-project-container"
     >
-        <h3 class="card-projects-title">FitZone Gym</h3>
+        <h3>FitZone Gym</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
         <WebComponent class="icon-languages" />
@@ -62,36 +68,36 @@ import WebComponent from "@/components/icons/WebComponent.astro";
     </CardProject>
 </div>
 <style>
-            .card-projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .section-projects-title {
-            margin-bottom: 40px;
-        }
-        .card-projects-title {
-            font-size: 26px;
-            text-align: center;
-            color: light-dark(#2d9759, #91e891);
-            font-weight: bold;
-        }
-        .card-projects-p {
-            justify-self: center;
-            margin: 15px 0 30px 0;
-            text-wrap: pretty;
-        }
+    .card-projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .section-projects-title {
+        margin-bottom: 40px;
+    }
+    h3 {
+        font-size: 26px;
+        text-align: center;
+        color: light-dark(#2d9759, #91e891);
+        font-weight: bold;
+    }
+    .card-projects-p {
+        justify-self: center;
+        margin: 15px 0 30px 0;
+        text-wrap: pretty;
+    }
 
-        .icon-languages {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
+    .icon-languages {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
 
-            height: 25px;
-            width: 25px;
-            margin: 0 0 0 8px;
-        }
-        .icon-languages:first-of-type {
-            margin-left: 0;
-        }
+        height: 25px;
+        width: 25px;
+        margin: 0 0 0 8px;
+    }
+    .icon-languages:first-of-type {
+        margin-left: 0;
+    }
 </style>

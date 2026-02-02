@@ -2,11 +2,13 @@
 const {image, linkWeb, linkRepo } = Astro.props;
 ---
 <article class="ar-main">
-    <img class="ar-main-cover" src={image} alt="porjectos">
-    <div>
+    { image ? <img class="ar-main-cover" src={image} alt="porjectos"> : null }
+    <div class="content">
         <slot />
-        <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a>
-        <a href={linkRepo} class="ar-a second-button" rel="noreferrer noopener" target="_blank">Código</a>
+        <div class="links-container">
+            { linkWeb ? <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">Sitio web</a> : null}
+            <a href={linkRepo} class="ar-a second-button" rel="noreferrer noopener" target="_blank">Código</a>
+        </div>
     </div>
 </article>
 
@@ -48,7 +50,13 @@ const {image, linkWeb, linkRepo } = Astro.props;
         color: light-dark(#333,#fff);
         background-color: initial;
     }
-    div {
+    .content {
         padding: 20px;
+    }
+    .links-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
 </style>
