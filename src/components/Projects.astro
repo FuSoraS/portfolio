@@ -1,5 +1,4 @@
 ---
-import { Picture } from "astro:assets";
 import CardProject from "@/components/CardProject.astro";
 import CardProjectDemo from "@/components/CardProjectDemo.astro";
 
@@ -7,6 +6,11 @@ import demoPT from "@/assets/proyecto-titulacion-bg.webp";
 import blogBg2 from "@/assets/blog-bg.webp";
 import fitBg from "@/assets/fit-bg.webp";
 import happyBirthday from "@/assets/happy-birthday-bg.webp";
+
+import demoPTAvif from "@/assets/proyecto-titulacion-bg.avif";
+import blogBg2Avif from "@/assets/blog-bg.avif";
+import fitBgAvif from "@/assets/fit.avif";
+import happyBirthdayAvif from "@/assets/happy-birthday-bg.avif";
 
 import IconHtml from "@/components/icons/HTML.astro";
 import IconCss from "@/components/icons/Css.astro";
@@ -20,7 +24,12 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
 
 <div class="card-projects">
     <CardProject linkRepo="https://github.com/FuSoraS/birthday-26">
-        <Picture src={happyBirthday} formats={['avif', 'webp']} alt="Imagen" class="ar-main-cover" slot="image" />
+        <picture slot="image">
+            <source srcset={happyBirthdayAvif.src} type="image/avif" />
+            <source srcset={happyBirthday.src} type="image/webp" />
+            <img src={happyBirthday.src} alt="Imagen" class="ar-main-cover" />
+        </picture>
+
         <h3>Happy birthday</h3>
         <IconAstro class="icon-languages" />
         <IconTailwind class="icon-languages" />
@@ -31,7 +40,11 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
         </p>
     </CardProject>
     <CardProjectDemo linkWeb="https://youtu.be/U_7Vx_W1v9k">
-        <Picture src={demoPT} formats={['avif', 'webp']} alt="Proyecto de titulación" class="ar-main-cover" slot="image" />
+        <picture slot="image">
+            <source srcset={demoPTAvif.src} type="image/avif" />
+            <source srcset={demoPT.src} type="image/webp" />
+            <img src={demoPT.src} alt="Proyecto de titulación" class="ar-main-cover" />
+        </picture>
         <h3>Proyecto de titulación</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
@@ -45,7 +58,11 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
         linkWeb="https://fusoras.github.io/blog/"
         linkRepo="https://github.com/FuSoraS/blog"
     >
-        <Picture src={blogBg2} formats={['avif', 'webp']} alt="Blog" class="ar-main-cover" slot="image" />
+        <picture slot="image">
+            <source srcset={blogBg2Avif.src} type="image/avif" />
+            <source srcset={blogBg2.src} type="image/webp" />
+            <img src={blogBg2.src} alt="Blog" class="ar-main-cover" />
+        </picture>
         <h3>Blog</h3>
         <IconAstro class="icon-languages" />
         <IconCss class="icon-languages" />
@@ -59,7 +76,11 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
         linkWeb="https://fusoras.github.io/page-fake1/"
         linkRepo="https://github.com/FuSoraS/page-fake1"
     >
-        <Picture src={fitBg} formats={['avif', 'webp']} alt="FitZone Gym" class="ar-main-cover" slot="image" />
+        <picture slot="image">
+            <source srcset={fitBgAvif.src} type="image/avif" />
+            <source srcset={fitBg.src} type="image/webp" />
+            <img src={fitBg.src} alt="FitZone Gym" class="ar-main-cover" />
+        </picture>
         <h3>FitZone Gym</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
