@@ -42,9 +42,13 @@ const { linkWeb } = Astro.props;
 
         transition: background-color .3s;
         margin-bottom: 10px;
-    }
-    .ar-a:hover {
-        background-color: light-dark(#cb24c3,#691465);
+
+        &:hover {
+            background-color: light-dark(#cb24c3,#691465);
+        }
+        &:active {
+            scale: 0.95;
+        }
     }
     div {
         padding: 20px;

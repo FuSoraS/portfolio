@@ -33,6 +33,10 @@ const { linkWeb, linkRepo } = Astro.props;
         margin-bottom: 20px;
 
         transition: background-color .3s;
+
+        &:active {
+            scale: 0.95;
+        }
     }
     .first-button:hover {
         background-color: light-dark(#43c278ad,#2fa35fad);
