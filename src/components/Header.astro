@@ -1,11 +1,12 @@
 ---
+import { ROUTES } from "@/config";
+
 import HeaderIcon from "@/components/HeaderIcon.astro";
 
 import IconLinkedin from "@/components/icons/Linkedin.astro";
 import IconMail from "@/components/icons/Mail.astro";
 import IconGithub from "@/components/icons/Github.astro";
 import BtnCopy from "@/components/BtnCopy.astro";
-
 ---
 <header class="header">
     <h1 class="header-h1">Front-end Developer</h1>
@@ -20,7 +21,7 @@ import BtnCopy from "@/components/BtnCopy.astro";
         <IconLinkedin class="icon" priority />
         Linkedin
     </HeaderIcon>
-    <HeaderIcon href="https://github.com/FuSoraS">
+    <HeaderIcon href={ROUTES.REPOSITORY}>
         <IconGithub class="icon" priority />
         Github
     </HeaderIcon>
