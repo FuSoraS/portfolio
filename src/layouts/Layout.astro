@@ -1,4 +1,5 @@
 ---
+import { ROUTES } from '@/config';
 const { title, description } = Astro.props;
 ---
 <!doctype html>
@@ -17,9 +18,9 @@ const { title, description } = Astro.props;
 		<meta name="twitter:description" content="Desarrollo web, Fron-end, Soporte tecnico"/>
 
 		<meta property="og:title" content="FuSoraS - Portafolio">
-		<meta property="og:image" content="https://fusoras.is-a.dev/og-image.jpg">
+		<meta property="og:image" content={`${ROUTES.HOSTNAME}/og-image.jpg`}>
 		<meta property="og:description" content="Desarrollo web, Fron-end, Soporte tecnico">
-		<meta property="og:url" content="https://fusoras.is-a.dev/"/>
+		<meta property="og:url" content={ROUTES.HOSTNAME}/>
 		<meta property="og:locale" content="es_ES" />
 
 		<meta name="description" content={`${description}`}>

@@ -1,4 +1,6 @@
 ---
+import { ROUTES } from '@/config';
+
 import CardProject from "@/components/CardProject.astro";
 import CardProjectDemo from "@/components/CardProjectDemo.astro";
 
@@ -26,7 +28,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
 <h2 class="section-projects-title">Proyectos</h2>
 
 <div class="card-projects">
-    <CardProject linkRepo="https://github.com/FuSoraS/birthday-26">
+    <CardProject linkRepo={`${ROUTES.REPOSITORY}/birthday-26`}>
         <picture slot="image">
             <source srcset={happyBirthdayAvif.src} type="image/avif" />
             <source srcset={happyBirthday.src} type="image/webp" />
@@ -61,8 +63,8 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
     </CardProjectDemo>
 
     <CardProject
-        linkWeb="https://fusoras.github.io/blog/"
-        linkRepo="https://github.com/FuSoraS/blog"
+        linkWeb={`${ROUTES.GITHUB_PAGES}/blog`}
+        linkRepo={`${ROUTES.REPOSITORY}/blog`}
     >
         <picture slot="image">
             <source srcset={blogBg2Avif.src} type="image/avif" />
@@ -79,8 +81,8 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
         </p>
     </CardProject>
     <CardProject
-        linkWeb="https://fusoras.github.io/page-fake1/"
-        linkRepo="https://github.com/FuSoraS/page-fake1"
+        linkWeb={`${ROUTES.GITHUB_PAGES}/page-fake1/`}
+        linkRepo={`${ROUTES.REPOSITORY}/page-fake1`}
     >
         <picture slot="image">
             <source srcset={fitBgAvif.src} type="image/avif" />

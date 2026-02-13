@@ -1,1 +1,6 @@
 minimumReleaseAge: 5760
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - esbuild
+  - sharp
