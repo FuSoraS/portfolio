@@ -24,5 +24,7 @@ pnpm-debug.log*
 .idea/
 # package manager
 bun.lock
-# Other
 package-lock.json
+pnpm-lock.yaml
+# other
+.vscode/
