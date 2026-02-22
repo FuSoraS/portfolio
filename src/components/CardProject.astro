@@ -26,6 +26,17 @@ Demo</a>}
         &:hover {
             box-shadow: 0 10px 30px light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
         }
+
+        & .content {
+            padding: 20px 20px 25px 20px;
+
+            & .links-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
     }
 
     .ar-a {
@@ -36,15 +47,11 @@ Demo</a>}
         font-weight: bold;
         padding: 10px 15px;
         box-sizing: border-box;
-        margin-bottom: 20px;
 
         transition: background-color .3s;
 
         &:active {
             scale: 0.95;
-        }
-        &:only-child {
-            margin-bottom: 0;
         }
 
         &.demo {
@@ -63,7 +70,6 @@ Demo</a>}
             box-sizing: border-box;
 
             transition: background-color .3s;
-            margin-bottom: 10px;
 
             &:hover {
                 background-color: light-dark(#cb24c3,#691465);
@@ -72,26 +78,16 @@ Demo</a>}
                 scale: 0.95;
             }
         }
-    }
+        &.first-button {
+            border-radius: 10px;
 
-    .first-button {
-        border-radius: 10px;
-
-        &:hover {
-            background-color: light-dark(#43c278ad,#2fa35fad);
+            &:hover {
+                background-color: light-dark(#43c278ad,#2fa35fad);
+            }
         }
-    }
-    .second-button {
-        color: light-dark(#333,#fff);
-        background-color: initial;
-    }
-    .content {
-        padding: 20px;
-    }
-    .links-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+        &.second-button {
+            color: light-dark(#333,#fff);
+            background-color: initial;
+        }
     }
 </style>
