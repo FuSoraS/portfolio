@@ -19,6 +19,11 @@ const { linkWeb, linkRepo } = Astro.props;
         width: 100%;
         height: fit-content;
         overflow: hidden;
+        transition: box-shadow .5s;
+
+        &:hover {
+            box-shadow: 0 10px 30px light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+        }
     }
 
     .ar-a {
