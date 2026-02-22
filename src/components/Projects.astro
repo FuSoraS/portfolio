@@ -2,7 +2,6 @@
 import { ROUTES } from '@/config';
 
 import CardProject from "@/components/CardProject.astro";
-import CardProjectDemo from "@/components/CardProjectDemo.astro";
 
 import demoPT from "@/assets/proyecto-titulacion-bg.webp";
 import blogBg2 from "@/assets/blog-bg.webp";
@@ -45,7 +44,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
             conectan cada página. Optimicé el rendimiento y la experiencia de usuario migrando la base de React a Svelte.
         </p>
     </CardProject>
-    <CardProjectDemo linkWeb="https://youtu.be/U_7Vx_W1v9k">
+    <CardProject linkYt="https://youtu.be/U_7Vx_W1v9k">
         <picture slot="image">
             <source srcset={demoPTAvif.src} type="image/avif" />
             <source srcset={demoPT.src} type="image/webp" />
@@ -60,8 +59,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
             Página inclusiva con modo oscuro, control de texto y animaciones
             desactivables para mejorar la accesibilidad.
         </p>
-    </CardProjectDemo>
-
+    </CardProject>
     <CardProject
         linkWeb={`${ROUTES.GITHUB_PAGES}/blog`}
         linkRepo={`${ROUTES.REPOSITORY}/blog`}
