@@ -11,8 +11,8 @@ const { image, icon: Icon, title, date, content } = Astro.props;
 ---
 <article class="container-education">
     <div class="container-title">
-        <div class="container-img">   
-            {image ? <img src={image} alt="Icono de educación"> : null}
+        <div class="container-img">
+            {image && <img src={image} alt="Icono de educación">}
             {Icon && <Icon/>}
         </div>
         <h3>{title}</h3>
