@@ -33,6 +33,7 @@ const { title, description } = Astro.props;
 <style>
 	:root {
 		--h2-m: 50px;
+		--bg-light: #fff;
 		--color-link: light-dark(#333, #fff);
 		--green: rgb(81 181 103);
 		--green-dark: rgb(68, 158, 87);
@@ -45,6 +46,6 @@ const { title, description } = Astro.props;
 		margin: 0 auto;
 		width: min(700px, 90%);
 		font-family: var(--font-content);
-		background-color: light-dark(#f5f5f5, #1a1a1a);
+		background-color: light-dark(var(--bg-light), #1a1a1a);
 	}
 </style>

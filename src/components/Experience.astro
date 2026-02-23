@@ -3,7 +3,7 @@ import CardEducation from "@/components/CardEducation.astro"
 import IconsWork from "@/components/icons/IconsWork.astro";
 import IconEducation from "@/components/icons/IconEducation.astro";
 ---
-<h2>Formación y experiencia</h2>
+<h2>Formación y experiencia<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-microscope"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 21h14" /><path d="M6 18h2" /><path d="M7 18v3" /><path d="M9 11l3 3l6 -6l-3 -3l-6 6" /><path d="M10.5 12.5l-1.5 1.5" /><path d="M17 3l3 3" /><path d="M12 21a6 6 0 0 0 3.715 -10.712" /></svg></h2>
 <CardEducation
     icon={IconsWork}
     title="Soporte técnico"
@@ -16,3 +16,18 @@ import IconEducation from "@/components/icons/IconEducation.astro";
     date="2023 - 2025"
     content="Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
 />
+
+<style>
+    h2 svg {
+        margin-left: .3rem;
+        animation: fadeIn 1s ease-in-out infinite alternate;
+    }
+    @keyframes fadeIn {
+        from {
+            color: #2d9759;
+        }
+        to {
+            color: #00c853;
+        }
+    }
+</style>
