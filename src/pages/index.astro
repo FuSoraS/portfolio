@@ -74,7 +74,7 @@ import Footer from "@/components/Footer.astro";
         }
     </style>
 
-    <script is:inline>
+    <script>
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav a");
         window.onscroll = () => {
@@ -87,9 +87,10 @@ import Footer from "@/components/Footer.astro";
                 if (top >= offset && top < offset + height) {
                     navLinks.forEach((links) => {
                         links.classList.remove("active");
-                        document
-                            .querySelector("nav a[href*=" + id + "]")
-                            .classList.add("active");
+                        const activeLink = document.querySelector("nav a[href*=" + id + "]");
+                        if (activeLink) {
+                            activeLink.classList.add("active");
+                        }
                     });
                 }
             });
