@@ -54,7 +54,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
         <IconCss class="icon-languages" />
         <IconOpenRouter class="icon-languages openrouter" />
         <IconFirebase class="icon-languages" />
-        <p class="card-projects-p">
+        <p>
             Página inclusiva con modo oscuro, control de texto y animaciones
             desactivables para mejorar la accesibilidad.
         </p>
@@ -71,7 +71,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
         <h3>Blog</h3>
         <IconAstro class="icon-languages" />
         <IconCss class="icon-languages" />
-        <p class="card-projects-p">
+        <p>
             Página web desarrollada con <strong>Astro</strong>. Implementé
             componentes reutilizables de Astro y utilicé las Colecciones de
             Contenido.
@@ -91,7 +91,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
         <IconCss class="icon-languages" />
         <WebComponent class="icon-languages" />
 
-        <p class="card-projects-p">
+        <p>
             Mi primera página web, en la cual implementé CSS utilizando la
             <strong>metodología BEM</strong>. También apliqué técnicas modernas
             como <strong>Nesting CSS</strong>, variables de CSS y media queries
@@ -104,19 +104,20 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 20px;
+
+        & h3 {
+            text-align: center;
+            color: light-dark(#2d9759, #91e891);
+            font-weight: bold;
+        }
+        & p {
+            justify-self: center;
+            margin: 15px 0 30px 0;
+            text-wrap: pretty;
+        }
     }
     .section-projects-title {
         margin-bottom: 40px;
-    }
-    h3 {
-        text-align: center;
-        color: light-dark(#2d9759, #91e891);
-        font-weight: bold;
-    }
-    .card-projects-p {
-        justify-self: center;
-        margin: 15px 0 30px 0;
-        text-wrap: pretty;
     }
 
     .icon-languages {
