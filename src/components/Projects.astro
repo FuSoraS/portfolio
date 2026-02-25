@@ -25,7 +25,10 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
 <h2 class="section-projects-title">Proyectos</h2>
 
 <div class="card-projects">
-    <CardProject linkRepo={`${ROUTES.REPOSITORY}/birthday-26`}>
+    <CardProject 
+        linkWeb={`${ROUTES.GITHUB_PAGES}/birthday-26`}
+        linkRepo={`${ROUTES.REPOSITORY}/birthday-26`}
+    >
         <video slot="cover" autoplay muted loop poster="/imgs/happy-birthday.avif" class="ar-main-cover">
             <source src="/videos/hb-av1.mp4" type="video/mp4" />
             <source src="/videos/hb-h264.mp4" type="video/mp4"/>
