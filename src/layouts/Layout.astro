@@ -32,22 +32,23 @@ const { title, description } = Astro.props;
 
 <style>
 	:root {
-		--bg-light: #fff;
 		--color-link: light-dark(#333, #fff);
 		--green: rgb(81 181 103);
 		--green-dark: rgb(68, 158, 87);
 		--font-content: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     	--border-n1: 1px solid light-dark(rgb(239, 243, 244), rgb(47, 51, 54)); 
 		color-scheme: light dark;
-	}
-	html,
-	body {
-		margin: 0 auto;
-		width: min(700px, 90%);
 		font-family: var(--font-content);
-		background-color: light-dark(var(--bg-light), #1a1a1a);
+		background-color: light-dark(#fff, #1a1a1a);
 	}
 	html {
+		display: flex;
+		place-content: center;
+	}
+	body {
+		margin: 0;
+		padding: clamp(16px, 8vw, 32px);
+		width: min(700px, 90%);
 		border-inline: var(--border-n1);
 	}
 </style>
