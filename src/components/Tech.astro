@@ -1,7 +1,10 @@
 ---
 import CardTechnologies from "@/components/CardTechnologies.astro";
 import IconPodman from "@/components/icons/IconPodman.astro";
-import IconTailwind from "@/components/icons/IconTailwind.astro";
+import IconDebian from "@/components/icons/Debian.astro";
+import IconOllama from "@/components/icons/Ollama.astro";
+import IconGit from "@/components/icons/Git.astro";
+import IconGiHub from "@/components/icons/Github.astro";
 ---
 
 <h2>Otras tecnologías</h2>
@@ -10,17 +13,27 @@ import IconTailwind from "@/components/icons/IconTailwind.astro";
     <CardTechnologies title="Podman">
         <IconPodman class="tech-card-svg" />
     </CardTechnologies>
-    <CardTechnologies title="Tailwind">
-        <IconTailwind class="tech-card-svg" />
+    <CardTechnologies title="Debian">
+        <IconDebian class="tech-card-svg" />
+    </CardTechnologies>
+    <CardTechnologies title="Ollama">
+        <IconOllama class="tech-card-svg" />
+    </CardTechnologies>
+    <CardTechnologies title="Git">
+        <IconGit class="tech-card-svg" />
+    </CardTechnologies>
+    <CardTechnologies title="GitHub">
+        <IconGiHub class="tech-card-svg" />
     </CardTechnologies>
 </div>
 <style>
-    .section-tech h2 {
+    h2 {
         margin-bottom: 2rem;
     }
     .tech-card-container {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 10px;
     }
     .tech-card-svg {
