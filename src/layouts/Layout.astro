@@ -37,7 +37,7 @@ const { title, description } = Astro.props;
 		--green: rgb(81 181 103);
 		--green-dark: rgb(68, 158, 87);
 		--font-content: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    	
+    	--border-n1: 1px solid light-dark(rgb(239, 243, 244), rgb(47, 51, 54)); 
 		color-scheme: light dark;
 	}
 	html,
@@ -46,5 +46,8 @@ const { title, description } = Astro.props;
 		width: min(700px, 90%);
 		font-family: var(--font-content);
 		background-color: light-dark(var(--bg-light), #1a1a1a);
+	}
+	html {
+		border-inline: var(--border-n1);
 	}
 </style>
