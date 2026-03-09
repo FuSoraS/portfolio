@@ -8,6 +8,7 @@ import Projects from "@/components/Projects.astro";
 import Tech from "@/components/Tech.astro";
 import Experience from "@/components/Experience.astro";
 import Footer from "@/components/Footer.astro";
+import ThemeIcon from "@/components/ThemeIcon.astro";
 ---
 
 <Layout
@@ -15,7 +16,6 @@ import Footer from "@/components/Footer.astro";
     description="Mi portafolio de desarrollo y programación web"
 >
     <Nav />
-
     <section id="home">
         <Header />
     </section>
@@ -39,6 +39,12 @@ import Footer from "@/components/Footer.astro";
     <Footer />
 
     <style is:global>
+        html.dark {
+            color-scheme: dark;
+        }
+        html.light {
+            color-scheme: light;
+        }
         html {
             scroll-behavior: smooth;
         }

@@ -1,12 +1,16 @@
+---
+import ThemeToggle from "@/components/ThemeToggle.astro";
+---
 <nav>
     <a class="active" href="#home">Inicio</a>
     <a href="#experience">Experiencia</a>
     <a href="#section-projects">Proyectos</a>
+    <ThemeToggle />
 </nav>
 <style>
     nav {
         display: flex;
-        justify-content: center;
+        place-items: center;
         margin: auto;
         flex-wrap: wrap;
 
