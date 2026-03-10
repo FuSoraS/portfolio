@@ -5,6 +5,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
     <a class="active" href="#home">Inicio</a>
     <a href="#experience">Experiencia</a>
     <a href="#section-projects">Proyectos</a>
+    <div class="line"></div>
     <ThemeToggle />
 </nav>
 <style>
@@ -19,6 +20,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         margin-top: 20px;
         margin-bottom: 25px;
         background-color: light-dark(#fff, #4e4e4e);
+        height: auto;
         width: fit-content;
         padding: 12px 20px;
         border-radius: 15px 3px 15px 3px;
@@ -39,6 +41,13 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         .active,
         a:hover {
             color: var(--green-dark);
+        }
+
+        & .line {
+            height: 30px;
+            width: 2px;
+            background-color:rgb(121 121 121);
+            border-radius: 2px;
         }
     }
     @keyframes animate-header {
