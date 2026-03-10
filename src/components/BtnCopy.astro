@@ -33,13 +33,16 @@ const mailText = "developer.fusoras@gmail.com";
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color .1s ease;
+        transition: background-color, scale .1s ease;
+
+        &:active,
+        #mail:active & {
+            background-color: var(--green);
+            scale: 0.9;
+        }
     }
     .mail-icon {
         height: 15px;
         width: 15px;
     }
-  #btn-copy:active {
-    background-color: var(--green);
-  }
 </style>
