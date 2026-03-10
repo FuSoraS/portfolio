@@ -16,6 +16,12 @@
       cursor: pointer;
       padding: 0;
       width: 24px;
+      -webkit-tap-highlight-color: transparent;
+      transition: scale 0.2s ease-in-out;
+
+      &:active {
+        scale: 0.9;
+      }
     }
   </style>
   <script is:inline>
