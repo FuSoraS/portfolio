@@ -46,6 +46,10 @@ import Footer from "@/components/Footer.astro";
         }
         html {
             scroll-behavior: smooth;
+
+            @media (prefers-reduced-motion: reduce) {
+		        scroll-behavior: inherit;
+	        }
         }
         h2 {
             font-size: 1.8rem;
