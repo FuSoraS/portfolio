@@ -5,4 +5,11 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   vite: {
   },
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'es',
+    routing: {
+        prefixDefaultLocale: false
+    }
+  }
 });
