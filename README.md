@@ -1,3 +1,6 @@
 # Portfolio
-My dev portfolio
-![alt text](src/assets/home.jpg)
+Personal Developer Portfolio
+
+Frontend Developer focused on Astro, TypeScript, and modern web experiences.
+
+![cover](/src/assets//home.webp)
