@@ -94,9 +94,8 @@ import Footer from "@/components/Footer.astro";
                 let offset = sect.offsetTop;
                 let height = sect.offsetHeight;
                 let id = sect.getAttribute("id");
-                const trigger = top + 50;
 
-                if (trigger >= offset && top < offset + height) {
+                if (top >= offset && top < offset + height) {
                     navLinks.forEach((links) => {
                         links.classList.remove("active");
                         const activeLink = document.querySelector("nav a[href*=" + id + "]");
