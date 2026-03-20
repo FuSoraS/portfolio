@@ -15,5 +15,12 @@
     "ABOUT_ME_PARAGRAPH_3": "Experiencia en desarrollo",
     "ABOUT_ME_PARAGRAPH_4": "web colaborativo",
     "ABOUT_ME_PARAGRAPH_5": "aprendiendo tecnologías modernas y aplicando buenas prácticas tanto en los sistemas operativos Windows y GNU/Linux.",
-    "ABOUT_ME_PARAGRAPH_6": "Como parte de mi interés en contribuir a proyectos open source, realicé una contribución a la documentación de 'is-a.dev' creando un fork. Corregí las rutas de las imágenes para asegurar su correcta visualización y envié un Pull Request (PR) con los cambios."
+    "ABOUT_ME_PARAGRAPH_6": "Como parte de mi interés en contribuir a proyectos open source, realicé una contribución a la documentación de 'is-a.dev' creando un fork. Corregí las rutas de las imágenes para asegurar su correcta visualización y envié un Pull Request (PR) con los cambios.",
+    "EXPERIENCE_TITLE": "Formación y experiencia",
+    "EXPERIENCE_PRACTICE_TITLE": "Soporte técnico",
+    "EXPERIENCE_PRACTICE_DATE": "2025 Enero - 2025 Abril",
+    "EXPERIENCE_PRACTICE_DESCRIPTION": "Instalación de sistemas operativos, gestión de cableado de red y mantenimiento básico de equipos informáticos.",
+    "EXPERIENCE_EDUCATION_TITLE": "Analista Programador",
+    "EXPERIENCE_EDUCATION_DATE": "2023 - 2025",
+    "EXPERIENCE_EDUCATION_DESCRIPTION": "Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
 }
