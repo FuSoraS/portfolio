@@ -1,10 +1,14 @@
 ---
 import IconCopy from '@/components/icons/IconCopy.astro';
 const mailText = "developer.fusoras@gmail.com";
+import { getI18N } from "@/i18n/index"
+
+const { currentLocale } = Astro
+const locate = getI18N({ currentLocale });
 ---
 
 <label id="mail" translate="no">{mailText}
-  <button id="btn-copy" title="Copiar">
+  <button id="btn-copy" title={locate.BTN_COPY}>
     <IconCopy />
   </button>
 </label>
@@ -17,7 +21,7 @@ const mailText = "developer.fusoras@gmail.com";
     try {
       await navigator.clipboard.writeText(textElement.textContent);
     } catch (err) {
-      console.error('Error al copiar:', err);
+      console.error('Copy error:', err);
     }
   });
 </script>
