@@ -8,5 +8,12 @@
     "HEADER_PARAGRAPH_1": "I'm a passionate about technology, specialized in",
     "HEADER_PARAGRAPH_2": "web", 
     "HEADER_PARAGRAPH_3": "creating modern and functional experiences.",
-    "BTN_COPY": "Copy"
+    "BTN_COPY": "Copy",
+    "ABOUT_ME_TITLE": "About me",
+    "ABOUT_ME_PARAGRAPH_1": "+2 years of training as a Technician in Analysis of",
+    "ABOUT_ME_PARAGRAPH_2": "Programming",
+    "ABOUT_ME_PARAGRAPH_3": "Experience in development",
+    "ABOUT_ME_PARAGRAPH_4": "collaborative web",
+    "ABOUT_ME_PARAGRAPH_5": "learning modern technologies and applying good practices both in Windows and GNU/Linux operating systems.",
+    "ABOUT_ME_PARAGRAPH_6": "Contributing to open source projects, I made a contribution to the documentation of 'is-a.dev' by creating a fork. I fixed the image paths to ensure their correct display and submitted a Pull Request (PR) with the changes."
 }

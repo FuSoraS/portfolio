@@ -8,5 +8,12 @@
     "HEADER_PARAGRAPH_1": "Soy un apasionado de la tecnología, especializado en",
     "HEADER_PARAGRAPH_2": "web", 
     "HEADER_PARAGRAPH_3": "creando experiencias modernas y funcionales.",
-    "BTN_COPY": "Copiar"
+    "BTN_COPY": "Copiar",
+    "ABOUT_ME_TITLE": "Sobre mí",
+    "ABOUT_ME_PARAGRAPH_1": "+2 años de formación como Técnico en Análisis de",
+    "ABOUT_ME_PARAGRAPH_2": "Programación",
+    "ABOUT_ME_PARAGRAPH_3": "Experiencia en desarrollo",
+    "ABOUT_ME_PARAGRAPH_4": "web colaborativo",
+    "ABOUT_ME_PARAGRAPH_5": "aprendiendo tecnologías modernas y aplicando buenas prácticas tanto en los sistemas operativos Windows y GNU/Linux.",
+    "ABOUT_ME_PARAGRAPH_6": "Como parte de mi interés en contribuir a proyectos open source, realicé una contribución a la documentación de 'is-a.dev' creando un fork. Corregí las rutas de las imágenes para asegurar su correcta visualización y envié un Pull Request (PR) con los cambios."
 }

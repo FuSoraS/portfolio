@@ -1,14 +1,15 @@
-<h2 id="about-me">Sobre mí<span>.</span></h2>
+---
+import { getI18N } from "@/i18n/index"
+
+const { currentLocale } = Astro
+const locate = getI18N({ currentLocale });
+---
+<h2 id="about-me">{locate.ABOUT_ME_TITLE} <span>.</span></h2>
 <p class="content-m">
-    +2 años de formación como Técnico en Análisis de <strong>Programación</strong>. Experiencia en desarrollo <strong>web colaborativo</strong>, aprendiendo
-    tecnologías modernas y aplicando buenas prácticas tanto en los sistemas
-    operativos Windows y GNU/Linux.
+    {locate.ABOUT_ME_PARAGRAPH_1} <strong>{locate.ABOUT_ME_PARAGRAPH_2}</strong>. {locate.ABOUT_ME_PARAGRAPH_3} <strong>{locate.ABOUT_ME_PARAGRAPH_4}</strong>, {locate.ABOUT_ME_PARAGRAPH_5}
 </p>
 <p class="content-m">
-    Como parte de mi interés en contribuir a proyectos open source, realicé una
-    contribución a la documentación de "is-a.dev" creando un fork. Corregí las
-    rutas de las imágenes para asegurar su correcta visualización y envié un
-    Pull Request (PR) con los cambios.
+    {locate.ABOUT_ME_PARAGRAPH_6}
 </p>
 
 <style>
