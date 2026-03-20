@@ -30,7 +30,7 @@ const { title, description } = Astro.props;
 	</body>
 </html>
 
-<style>
+<style is:global>
 	:root {
 		--color-link: light-dark(#333, #fff);
 		--green: rgb(81 181 103);
@@ -47,6 +47,13 @@ const { title, description } = Astro.props;
 		place-content: center;
 		scroll-behavior: smooth;
 
+		&.dark {
+			color-scheme: dark;
+		}
+		&.light {
+			color-scheme: light;
+		}
+		
 		@media (prefers-reduced-motion: reduce) {
 			scroll-behavior: inherit;
 		}
@@ -57,11 +64,18 @@ const { title, description } = Astro.props;
 		width: min(700px, 90%);
 		border-inline: var(--border-n1);
 	}
-	html.dark {
-		color-scheme: dark;
+	h2 {
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin-bottom: 20px;
+		color: light-dark(#0F1419, #E7E9EA);
 	}
-	html.light {
-		color-scheme: light;
+	h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	strong {
+		color: var(--green);
 	}
 </style>
 <script>
