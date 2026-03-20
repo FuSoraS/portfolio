@@ -1,11 +1,11 @@
 ---
-import IconCopy from '@/components/icons/Copy.astro';
+import IconCopy from '@/components/icons/IconCopy.astro';
 const mailText = "developer.fusoras@gmail.com";
 ---
 
 <label id="mail" translate="no">{mailText}
   <button id="btn-copy" title="Copiar">
-    <IconCopy class="mail-icon"/>
+    <IconCopy />
   </button>
 </label>
 
@@ -40,9 +40,11 @@ const mailText = "developer.fusoras@gmail.com";
             background-color: var(--green);
             scale: 0.9;
         }
-    }
-    .mail-icon {
-        height: 15px;
-        width: 15px;
+
+        & svg {
+            color: var(--svg-color);
+            height: 15px;
+            width: 15px;
+        }
     }
 </style>

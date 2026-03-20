@@ -3,53 +3,48 @@ import { ROUTES } from "@/config";
 
 import HeaderIcon from "@/components/HeaderIcon.astro";
 
-import IconLinkedin from "@/components/icons/Linkedin.astro";
-import IconMail from "@/components/icons/Mail.astro";
-import IconGithub from "@/components/icons/Github.astro";
+import IconLinkedin from "@/components/icons/IconLinkedin.astro";
+import IconMail from "@/components/icons/IconMail.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
 import BtnCopy from "@/components/BtnCopy.astro";
 ---
-<header class="header">
-    <h1 class="header-h1" translate="no">Front-end Developer</h1>
-    <p class="header-p">
+<header>
+    <h1 translate="no">Front-end Developer</h1>
+    <p>
         Soy un apasionado por la tecnología, especializado en
-        <strong>web</strong>, desarrollando desde
-        <strong>Gnu-Linux</strong>.
+        <strong>web</strong>, creando experiencias modernas y funcionales.
     </p>
 </header>
 <section class="sc-btn">
     <HeaderIcon href="https://www.linkedin.com/in/fusoras">
-        <IconLinkedin class="icon" />
+        <IconLinkedin />
         Linkedin
     </HeaderIcon>
     <HeaderIcon href={ROUTES.REPOSITORY}>
-        <IconGithub class="icon" />
+        <IconGithub />
         Github
     </HeaderIcon>
 </section>
 
 <section class="sc-mail">
-    <IconMail class="icon-mail" />
+    <IconMail />
     <BtnCopy />
 </section>
 <style>
-    :root {
-        --size-border: 5px solid light-dark(#333, #fff);
-    }
-    .header-h1 {
-        text-align: center;
-        font-weight: bold;
-        margin-top: 100px;
-        font-size: max(37px, 90%);
-        color: light-dark(rgb(78 143 78), rgb(180, 218, 187));
-    }
-    .header-p {
-        text-wrap: pretty;
-        margin: auto;
-        margin-bottom: 32px;
-        width: min(450px, 90%);
-    }
-    .header-p strong {
-        color: var(--green);
+    header {
+        & h1 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 100px;
+            font-size: max(37px, 90%);
+            color: light-dark(rgb(78 143 78), rgb(180, 218, 187));
+        }
+        & p {
+            width: min(450px, 90%);
+            text-wrap: pretty;
+            margin: auto;
+            margin-bottom: 32px;
+        }
     }
     .sc-btn {
         display: flex;
@@ -57,6 +52,13 @@ import BtnCopy from "@/components/BtnCopy.astro";
         gap: 10px;
         align-items: center;
         flex-wrap: wrap;
+
+        & svg {
+            color: var(--svg-color);
+            width: 22px;
+            height: 22px;
+            aspect-ratio: 22 / 22;
+        }
     }
     .sc-mail {
         display: flex;
@@ -65,15 +67,12 @@ import BtnCopy from "@/components/BtnCopy.astro";
         flex-wrap: wrap;
 
         margin-top: 20px;
+
+        & svg {
+            color: var(--svg-color);
+            width: 25px;
+            height: 25px;
+        }
     }
-    .icon {
-        color: light-dark(#333, #fff);
-        width: 22px;
-        height: 22px;
-        aspect-ratio: 22 / 22;
-    }
-    .icon-mail {
-        width: 25px;
-        height: 25px;
-    }
+
 </style>
