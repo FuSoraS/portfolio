@@ -1,10 +1,12 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Nav from "@/components/Nav.astro";
-import Header from "@/components/Header.astro";
-import AboutMe from '@/components/AboutMe.astro';
-import Experience from '@/components/Experience.astro';
-import Footer from "@/components/Footer.astro";
+import Layout from '@/layouts/Layout.astro'
+import Nav from "@/components/Nav.astro"
+import Header from "@/components/Header.astro"
+import AboutMe from '@/components/AboutMe.astro'
+import Experience from '@/components/Experience.astro'
+import Projects from '@/components/Projects.astro'
+import Tech from '@/components/Tech.astro'
+import Footer from "@/components/Footer.astro"
 import { getI18N } from "@/i18n/index"
 
 const { currentLocale } = Astro
@@ -29,9 +31,11 @@ const locate = getI18N({ currentLocale });
     </section>
 
     <section id="section-projects">
+        <Projects />
     </section>
 
     <section class="section-tech" id="other-tech">
+        <Tech />
     </section>
 
     <Footer />

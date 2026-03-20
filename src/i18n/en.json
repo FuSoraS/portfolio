@@ -5,8 +5,8 @@
     "NAV_EXPERIENCE": "Experience",
     "NAV_PROJECTS": "Projects",
     "HEADER_TITLE": "Front-end Developer",
-    "HEADER_PARAGRAPH_1": "I'm a passionate about technology, specialized in",
-    "HEADER_PARAGRAPH_2": "web", 
+    "HEADER_PARAGRAPH_1": "I'm passionate about technology, specialized in",
+    "HEADER_PARAGRAPH_2": "web",
     "HEADER_PARAGRAPH_3": "creating modern and functional experiences.",
     "BTN_COPY": "Copy",
     "ABOUT_ME_TITLE": "About me",
@@ -14,13 +14,23 @@
     "ABOUT_ME_PARAGRAPH_2": "Programming",
     "ABOUT_ME_PARAGRAPH_3": "Experience in development",
     "ABOUT_ME_PARAGRAPH_4": "collaborative web",
-    "ABOUT_ME_PARAGRAPH_5": "learning modern technologies and applying good practices both in Windows and GNU/Linux operating systems.",
-    "ABOUT_ME_PARAGRAPH_6": "Contributing to open source projects, I made a contribution to the documentation of 'is-a.dev' by creating a fork. I fixed the image paths to ensure their correct display and submitted a Pull Request (PR) with the changes.",
+    "ABOUT_ME_PARAGRAPH_5": "learning modern technologies and applying good practices in both Windows and GNU/Linux operating systems.",
+    "ABOUT_ME_PARAGRAPH_6": "As part of my interest in contributing to open source projects, I made a contribution to the 'is-a.dev' documentation by creating a fork. I fixed the image paths to ensure their correct display and submitted a Pull Request (PR) with the changes.",
     "EXPERIENCE_TITLE": "Education and experience",
     "EXPERIENCE_PRACTICE_TITLE": "Technical support",
-    "EXPERIENCE_PRACTICE_DATE": "2025 January - 2025 April",
+    "EXPERIENCE_PRACTICE_DATE": "January 2025 - April 2025",
     "EXPERIENCE_PRACTICE_DESCRIPTION": "Installation of operating systems, network cable management and basic maintenance of computer equipment.",
     "EXPERIENCE_EDUCATION_TITLE": "Analyst Programmer",
     "EXPERIENCE_EDUCATION_DATE": "2023 - 2025",
-    "EXPERIENCE_EDUCATION_DESCRIPTION": "Knowledge in MySQL databases, web development and Java programming with object-oriented orientation. Knowledge in various operating systems and technical English."
+    "EXPERIENCE_EDUCATION_DESCRIPTION": "Knowledge in MySQL databases, web development and Java programming with object-oriented orientation. Knowledge in various operating systems and technical English.",
+    "PROJECTS_TITLE": "Projects",
+    "PROJECTS": {
+        "HAPPY_BIRTHDAY_TITLE": "Happy Birthday",
+        "HAPPY_BIRTHDAY_DESCRIPTION": "I transformed the visual experience with smooth animations that connect each page. I optimized performance and user experience by migrating the React base to Svelte.",
+        "DEGREE_TITLE": "Graduation project",
+        "DEGREE_DESCRIPTION": "Inclusive page with dark mode, text control and disableable animations to improve accessibility.",
+        "FITZONE_GYM_TITLE": "FitZone Gym",
+        "FITZONE_GYM_DESCRIPTION": "My first website, in which I implemented CSS using the BEM methodology. I also applied modern techniques such as CSS Nesting, CSS variables and media queries with conditionals."
+    },
+    "OTHER_TECH_TITLE": "Other technologies"
 }

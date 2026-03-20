@@ -6,7 +6,7 @@
     "NAV_PROJECTS": "Proyectos",
     "HEADER_TITLE": "Front-end Developer",
     "HEADER_PARAGRAPH_1": "Soy un apasionado de la tecnología, especializado en",
-    "HEADER_PARAGRAPH_2": "web", 
+    "HEADER_PARAGRAPH_2": "web",
     "HEADER_PARAGRAPH_3": "creando experiencias modernas y funcionales.",
     "BTN_COPY": "Copiar",
     "ABOUT_ME_TITLE": "Sobre mí",
@@ -22,5 +22,15 @@
     "EXPERIENCE_PRACTICE_DESCRIPTION": "Instalación de sistemas operativos, gestión de cableado de red y mantenimiento básico de equipos informáticos.",
     "EXPERIENCE_EDUCATION_TITLE": "Analista Programador",
     "EXPERIENCE_EDUCATION_DATE": "2023 - 2025",
-    "EXPERIENCE_EDUCATION_DESCRIPTION": "Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico."
+    "EXPERIENCE_EDUCATION_DESCRIPTION": "Conocimiento en bases de datos MySQL, desarrollo web y programación en Java con orientación a objetos. Conocimientos en diversos sistemas operativos e inglés técnico.",
+    "PROJECTS_TITLE": "Proyectos",
+    "PROJECTS": {
+        "HAPPY_BIRTHDAY_TITLE": "Happy Birthday",
+        "HAPPY_BIRTHDAY_DESCRIPTION": "Transformé la experiencia visual con animaciones fluidas que conectan cada página. Optimicé el rendimiento y la experiencia de usuario migrando la base de React a Svelte.",
+        "DEGREE_TITLE": "Proyecto de titulación",
+        "DEGREE_DESCRIPTION": "Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.",
+        "FITZONE_GYM_TITLE": "FitZone Gym",
+        "FITZONE_GYM_DESCRIPTION": "Mi primera página web, en la cual implementé CSS utilizando la metodología BEM. También apliqué técnicas modernas como Nesting CSS, variables de CSS y media queries con condicionales."
+    },
+    "OTHER_TECH_TITLE": "Otras tecnologías"
 }

@@ -1,14 +1,9 @@
 ---
-import { ROUTES } from '@/config';
-
 import CardProject from "@/components/CardProject.astro";
-
 import demoPT from "@/assets/proyecto-titulacion-bg.webp";
 import fitBg from "@/assets/fit-bg.webp";
-
 import demoPTAvif from "@/assets/proyecto-titulacion-bg.avif";
 import fitBgAvif from "@/assets/fit.avif";
-
 import IconHtml from "@/components/icons/IconHtml.astro";
 import IconCss from "@/components/icons/IconCss.astro";
 import IconAstro from "@/components/icons/IconAstro.astro";
@@ -18,9 +13,14 @@ import IconSvelte from "@/components/icons/IconSvelte.astro";
 import IconTypeScript from "@/components/icons/IconTypeScript.astro";
 import IconOpenRouter from "@/components/icons/IconOpenRouter.astro";
 import IconFirebase from "@/components/icons/IconFirebase.astro";
+import { ROUTES } from '@/config';
+import { getI18N } from "@/i18n/index"
+
+const { currentLocale } = Astro
+const locate = getI18N({ currentLocale });
 ---
 
-<h2 class="section-projects-title">Proyectos</h2>
+<h2 class="section-projects-title">{locate.PROJECTS_TITLE}</h2>
 
 <div class="card-projects">
     <CardProject 
@@ -31,30 +31,28 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
             <source src="/videos/hb-av1.mp4" type="video/mp4" />
             <source src="/videos/hb-h264.mp4" type="video/mp4"/>
         </video>
-        <h3>Happy birthday</h3>
+        <h3>{locate.PROJECTS.HAPPY_BIRTHDAY_TITLE}</h3>
         <IconAstro class="icon-languages" />
         <IconTypeScript class="icon-languages" />
         <IconTailwind class="icon-languages" />
         <IconSvelte class="icon-languages" />
         <p>
-            Transformé la experiencia visual con animaciones fluidas que
-            conectan cada página. Optimicé el rendimiento y la experiencia de usuario migrando la base de React a Svelte.
+            {locate.PROJECTS.HAPPY_BIRTHDAY_DESCRIPTION}
         </p>
     </CardProject>
     <CardProject linkYt="https://youtu.be/U_7Vx_W1v9k">
         <picture slot="cover">
             <source srcset={demoPTAvif.src} type="image/avif" />
             <source srcset={demoPT.src} type="image/webp" />
-            <img src={demoPT.src} alt="Proyecto de titulación" class="ar-main-cover" />
+            <img src={demoPT.src} alt={locate.PROJECTS.DEGREE_TITLE} class="ar-main-cover" />
         </picture>
-        <h3>Proyecto de titulación</h3>
+        <h3>{locate.PROJECTS.DEGREE_TITLE}</h3>
         <IconHtml class="icon-languages" />
         <IconCss class="icon-languages" />
         <IconOpenRouter class="icon-languages openrouter" />
         <IconFirebase class="icon-languages" />
         <p>
-            Página inclusiva con modo oscuro, control de texto y animaciones
-            desactivables para mejorar la accesibilidad.
+            {locate.PROJECTS.DEGREE_DESCRIPTION}
         </p>
     </CardProject>
     <CardProject
@@ -72,10 +70,7 @@ import IconFirebase from "@/components/icons/IconFirebase.astro";
         <WebComponent class="icon-languages" />
 
         <p>
-            Mi primera página web, en la cual implementé CSS utilizando la
-            <strong>metodología BEM</strong>. También apliqué técnicas modernas
-            como <strong>Nesting CSS</strong>, variables de CSS y media queries
-            con condicionales.
+            {locate.PROJECTS.FITZONE_GYM_DESCRIPTION}
         </p>
     </CardProject>
 </div>
