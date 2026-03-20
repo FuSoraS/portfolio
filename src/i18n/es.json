@@ -30,7 +30,12 @@
         "DEGREE_TITLE": "Proyecto de titulación",
         "DEGREE_DESCRIPTION": "Página inclusiva con modo oscuro, control de texto y animaciones desactivables para mejorar la accesibilidad.",
         "FITZONE_GYM_TITLE": "FitZone Gym",
-        "FITZONE_GYM_DESCRIPTION": "Mi primera página web, en la cual implementé CSS utilizando la metodología BEM. También apliqué técnicas modernas como Nesting CSS, variables de CSS y media queries con condicionales."
+        "FITZONE_GYM_DESCRIPTION": "Mi primera página web, en la cual implementé CSS utilizando la metodología BEM. También apliqué técnicas modernas como Nesting CSS, variables de CSS y media queries con condicionales.",
+        "CARD": {
+            "BTN_DEMO": "Ver demo",
+            "BTN_CODE": "Código",
+            "BTN_WEB": "Sitio web"
+        }
     },
     "OTHER_TECH_TITLE": "Otras tecnologías"
 }
