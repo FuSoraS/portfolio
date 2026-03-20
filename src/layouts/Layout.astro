@@ -1,9 +1,10 @@
 ---
-import { ROUTES } from '@/config';
-const { title, description } = Astro.props;
+import { ROUTES } from '@/config'
+const { currentLocale } = Astro
+const { title, description } = Astro.props
 ---
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -14,16 +15,16 @@ const { title, description } = Astro.props;
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:creator" content="FuSoraS"/>
-		<meta name="twitter:title" content="FuSoraS - Portafolio"/>
-		<meta name="twitter:description" content="Desarrollo web, Fron-end, Soporte tecnico"/>
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description}/>
 
-		<meta property="og:title" content="FuSoraS - Portafolio">
+		<meta property="og:title" content={title} />
 		<meta property="og:image" content={`${ROUTES.HOSTNAME}/og-image.jpg`}>
-		<meta property="og:description" content="Desarrollo web, Fron-end, Soporte tecnico">
+		<meta property="og:description" content={description}>
 		<meta property="og:url" content={ROUTES.HOSTNAME}/>
 		<meta property="og:locale" content="es_ES" />
 
-		<meta name="description" content={`${description}`}>
+		<meta name="description" content={description}>
 	</head>
 	<body>
 		<slot />

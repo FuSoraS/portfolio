@@ -1,12 +1,14 @@
 ---
-import es from "@/i18n/es.json";
+const { currentLocale } = Astro
+import { getI18N } from "@/i18n/index"
+const locate = getI18N({ currentLocale });
 
 import ThemeToggle from "@/components/ThemeToggle.astro";
 ---
 <nav>
-    <a class="active" href="#home">{es.NAV_HOME}</a>
-    <a href="#experience">{es.NAV_EXPERIENCE}</a>
-    <a href="#section-projects">{es.NAV_PROJECTS}</a>
+    <a class="active" href="#home">{locate.NAV_HOME}</a>
+    <a href="#experience">{locate.NAV_EXPERIENCE}</a>
+    <a href="#section-projects">{locate.NAV_PROJECTS}</a>
     <div class="line"></div>
     <ThemeToggle />
 </nav>
