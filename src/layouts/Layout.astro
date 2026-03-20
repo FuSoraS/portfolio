@@ -1,7 +1,7 @@
 ---
 import { ROUTES } from '@/config'
 const { currentLocale } = Astro
-const { title, description } = Astro.props
+const { title, description, lang } = Astro.props
 ---
 <!doctype html>
 <html lang={currentLocale}>
@@ -22,7 +22,7 @@ const { title, description } = Astro.props
 		<meta property="og:image" content={`${ROUTES.HOSTNAME}/og-image.jpg`}>
 		<meta property="og:description" content={description}>
 		<meta property="og:url" content={ROUTES.HOSTNAME}/>
-		<meta property="og:locale" content="es_ES" />
+		<meta property="og:locale" content={lang} />
 
 		<meta name="description" content={description}>
 	</head>
