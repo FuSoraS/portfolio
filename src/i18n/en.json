@@ -1,5 +1,10 @@
 {
     "SEO_TITLE": "FuSoraS | Portfolio",
     "SEO_DESCRIPTION": "My web development and programming portfolio",
-    "NAV_HOME": "Home"
+    "NAV_HOME": "Home",
+    "NAV_EXPERIENCE": "Experience",
+    "NAV_PROJECTS": "Projects",
+    "HEADER_PARAGRAPH_1": "I'm a passionate about technology, specialized in",
+    "HEADER_PARAGRAPH_2": "web", 
+    "HEADER_PARAGRAPH_3": "creating modern and functional experiences."
 }

@@ -1,8 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 
-import Nav from "@/components/Nav.astro";
-import Header from "@/components/Header.astro";
+import Nav from "@/components/en/Nav.astro";
+import Header from "@/components/en/Header.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import Projects from "@/components/Projects.astro";
 import Tech from "@/components/Tech.astro";
@@ -15,20 +15,25 @@ import { SEO_TITLE, SEO_DESCRIPTION } from "@/i18n/en.json";
     title=`${SEO_TITLE}`
     description=`${SEO_DESCRIPTION}`  
 >
-    
+    <Nav />
     <section id="home">
+        <Header />
     </section>
 
     <section id="section-about-me">
+        <AboutMe />
     </section>
 
     <section id="experience">
+        <Experience />
     </section>
 
     <section id="section-projects">
+        <Projects />
     </section>
 
     <section class="section-tech" id="other-tech">
+        <Tech />
     </section>
 
     <Footer />
