@@ -5,10 +5,10 @@ const { currentLocale } = Astro
 const locate = getI18N({ currentLocale });
 ---
 <h2 id="about-me">{locate.ABOUT_ME_TITLE}<span>.</span></h2>
-<p class="content-m">
+<p>
     {locate.ABOUT_ME_PARAGRAPH_1} <strong>{locate.ABOUT_ME_PARAGRAPH_2}</strong>. {locate.ABOUT_ME_PARAGRAPH_3} <strong>{locate.ABOUT_ME_PARAGRAPH_4}</strong>, {locate.ABOUT_ME_PARAGRAPH_5}
 </p>
-<p class="content-m">
+<p>
     {locate.ABOUT_ME_PARAGRAPH_6}
 </p>
 
@@ -16,7 +16,7 @@ const locate = getI18N({ currentLocale });
     #about-me {
         margin-top: 128px;
     }
-    .content-m {
+    p {
         margin-block: 1lh;
         margin-block: 1em;
     }
