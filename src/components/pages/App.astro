@@ -42,9 +42,12 @@ const locate = getI18N({ currentLocale });
     <Footer />
 
     <style>
-        section {
-            padding-top: 25px;
+        section:not(:first-of-type) {
+            padding-top: 30px;
             margin-bottom: 2rem;
+        }
+        #home {
+            padding-block: 6rem;
         }
     </style>
 </Layout>
