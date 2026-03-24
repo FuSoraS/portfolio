@@ -4,7 +4,7 @@ import { getI18N } from "@/i18n/index"
 const { currentLocale } = Astro
 const locate = getI18N({ currentLocale });
 ---
-<h2 id="about-me">{locate.ABOUT_ME_TITLE} <span>.</span></h2>
+<h2 id="about-me">{locate.ABOUT_ME_TITLE}<span>.</span></h2>
 <p class="content-m">
     {locate.ABOUT_ME_PARAGRAPH_1} <strong>{locate.ABOUT_ME_PARAGRAPH_2}</strong>. {locate.ABOUT_ME_PARAGRAPH_3} <strong>{locate.ABOUT_ME_PARAGRAPH_4}</strong>, {locate.ABOUT_ME_PARAGRAPH_5}
 </p>
@@ -18,5 +18,8 @@ const locate = getI18N({ currentLocale });
     }
     .content-m {
         margin-bottom: 30px;
+    }
+    span {
+        color: var(--green);
     }
 </style>
