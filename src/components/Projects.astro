@@ -20,9 +20,9 @@ const { currentLocale } = Astro
 const locate = getI18N({ currentLocale });
 ---
 
-<h2 class="section-projects-title">{locate.PROJECTS_TITLE}</h2>
+<h2>{locate.PROJECTS_TITLE}</h2>
 
-<div class="card-projects">
+<div class="container-projects">
     <CardProject 
         linkWeb={`${ROUTES.GITHUB_PAGES}/birthday-26`}
         linkRepo={`${ROUTES.REPOSITORY}/birthday-26`}
@@ -32,10 +32,12 @@ const locate = getI18N({ currentLocale });
             <source src="/videos/hb-h264.mp4" type="video/mp4"/>
         </video>
         <h3>{locate.PROJECTS.HAPPY_BIRTHDAY_TITLE}</h3>
-        <IconAstro class="icon-languages" />
-        <IconTypeScript class="icon-languages" />
-        <IconTailwind class="icon-languages" />
-        <IconSvelte class="icon-languages" />
+        <div class="container-icons">
+            <IconAstro class="icon-languages" />
+            <IconTypeScript class="icon-languages" />
+            <IconTailwind class="icon-languages" />
+            <IconSvelte class="icon-languages" />
+        </div>
         <p>
             {locate.PROJECTS.HAPPY_BIRTHDAY_DESCRIPTION}
         </p>
@@ -47,10 +49,12 @@ const locate = getI18N({ currentLocale });
             <img src={demoPT.src} alt={locate.PROJECTS.DEGREE_TITLE} class="ar-main-cover" />
         </picture>
         <h3>{locate.PROJECTS.DEGREE_TITLE}</h3>
-        <IconHtml class="icon-languages" />
-        <IconCss class="icon-languages" />
-        <IconOpenRouter class="icon-languages openrouter" />
-        <IconFirebase class="icon-languages" />
+        <div class="container-icons">
+            <IconHtml />
+            <IconCss />
+            <IconOpenRouter />
+            <IconFirebase />
+        </div>
         <p>
             {locate.PROJECTS.DEGREE_DESCRIPTION}
         </p>
@@ -65,9 +69,11 @@ const locate = getI18N({ currentLocale });
             <img src={fitBg.src} alt="FitZone Gym" class="ar-main-cover" />
         </picture>
         <h3>FitZone Gym</h3>
-        <IconHtml class="icon-languages" />
-        <IconCss class="icon-languages" />
-        <WebComponent class="icon-languages" />
+        <div class="container-icons">
+            <IconHtml />
+            <IconCss />
+            <WebComponent />
+        </div>
 
         <p>
             {locate.PROJECTS.FITZONE_GYM_DESCRIPTION}
@@ -75,7 +81,7 @@ const locate = getI18N({ currentLocale });
     </CardProject>
 </div>
 <style>
-    .card-projects {
+    .container-projects {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         gap: 20px;
@@ -90,35 +96,23 @@ const locate = getI18N({ currentLocale });
             margin: 15px 0 30px 0;
             text-wrap: pretty;
         }
-    }
-    .section-projects-title {
-        margin-bottom: 40px;
-    }
+        & .ar-main-cover {
+            display: block;
+            height: 200px;
+            width: 100%;
+            margin: auto;
+            object-fit: cover;
+            aspect-ratio: 16 / 9;
+        }
+        & .container-icons {
+            display: flex;
+            gap: 10px;
 
-    .icon-languages {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-        height: 25px;
-        width: 25px;
-        margin: 0 0 0 8px;
-
-        color: var(--svg-color);
-    }
-    .icon-languages:first-of-type {
-        margin-left: 0;
-    }
-
-    .ar-main-cover {
-        display: block;
-        height: 200px;
-        width: 100%;
-        margin: auto;
-        object-fit: cover;
-        aspect-ratio: 16 / 9;
-    }
-    .openrouter {
-        color: light-dark(#000000, #ffffff);
+            & svg {
+                height: 25px;
+                width: 25px;
+                color: var(--svg-color);
+            }
+        }
     }
 </style>
