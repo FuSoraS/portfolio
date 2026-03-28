@@ -1,106 +1,174 @@
 ---
-import { getI18N } from "@/i18n/index"
+import { getI18N } from "@/i18n/index";
 
-const { currentLocale } = Astro
+const { currentLocale } = Astro;
 const locate = getI18N({ currentLocale });
 const { linkWeb, linkRepo, linkYt } = Astro.props;
 ---
+
 <article class="ar-main">
     <slot name="cover" />
-    <div class="content">
+    <div class="container-content">
         <slot />
-        <div class="links-container">
-            {linkWeb && <a href={linkWeb} class="ar-a first-button" rel="noreferrer noopener" target="_blank">{locate.PROJECTS.CARD.BTN_WEB}</a>}
-            {linkRepo && <a href={linkRepo} class="ar-a second-button" rel="noreferrer noopener" target="_blank">{locate.PROJECTS.CARD.BTN_CODE}</a>}
-            {linkYt && <a href={linkYt} class="ar-a demo" rel="noreferrer noopener" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
-{locate.PROJECTS.CARD.BTN_DEMO}</a>}
+        <div class="container-link">
+            {
+                linkWeb && (
+                    <a
+                        href={linkWeb}
+                        class="ar-a btn-web"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
+                        {locate.PROJECTS.CARD.BTN_WEB}
+                    </a>
+                )
+            }
+            {
+                linkRepo && (
+                    <a
+                        href={linkRepo}
+                        class="ar-a btn-code"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
+                        {locate.PROJECTS.CARD.BTN_CODE}
+                    </a>
+                )
+            }
+            {
+                linkYt && (
+                    <a
+                        href={linkYt}
+                        class="ar-a btn-demo"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"
+                        >
+                            <>
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                            </>
+                        </svg>
+                        {locate.PROJECTS.CARD.BTN_DEMO}
+                    </a>
+                )
+            }
         </div>
     </div>
 </article>
 
 <style>
+    :root {
+        --color-btn-web: light-dark(
+            hsl(145, 54.55%, 30.2%),
+            hsl(144.83, 55.24%, 41.18%)
+        ); /* #237746,#2FA35F */
+        --color-btn-web-hover: light-dark(
+            hsl(145, 54.55%, 22.2%),
+            hsl(144.83, 55.24%, 31.18%)
+        );
+        --color-btn-demo: light-dark(
+            hsl(313.88, 60.2%, 39.41%),
+            hsl(302.88, 63.45%, 38.63%)
+        ); /* #A12885,#a1249 */
+        --color-btn-demo-hover: light-dark(
+            hsl(313.88, 60.2%, 32.41%),
+            hsl(302.88, 63.45%, 31.63%)
+        );
+    }
     .ar-main {
         border: var(--border-n1);
         border-radius: 15px;
         width: 100%;
         height: fit-content;
         overflow: hidden;
-        transition: box-shadow .3s;
-        background-color: light-dark(#f7f7f7,#1a1a1a);
+        transition: box-shadow 0.3s;
+        background-color: light-dark(#f7f7f7, #1a1a1a);
         animation: reveal linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 30%;
 
         &:hover {
-            box-shadow: 0 10px 30px light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+            box-shadow: 0 10px 30px
+                light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
         }
 
         @media (prefers-reduced-motion: reduce) {
-            transition: .1s;
+            transition: 0.1s;
             animation: none;
         }
-  
-        & .content {
+
+        & .container-content {
             padding: 0 20px 25px 20px;
 
-            & .links-container {
+            & .container-link {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
+
+                & .ar-a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: light-dark(#fff, #fff);
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    box-sizing: border-box;
+
+                    transition: background-color 0.3s;
+
+                    &:active {
+                        scale: 0.95;
+                    }
+                    
+                    &.btn-web {
+                        background-color: var(--color-btn-web);
+                        border-radius: 10px;
+
+                        &:hover,
+                        &:active {
+                            background-color: var(--color-btn-web-hover);
+                        }
+                    }
+                    &.btn-demo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2px;
+                        width: 100%;
+
+                        background-color: var(--color-btn-demo);
+                        text-decoration: none;
+                        color: light-dark(#fff, #fff);
+                        border-radius: 10px;
+                        font-weight: bold;
+                        padding: 10px 15px;
+                        box-sizing: border-box;
+
+                        transition: background-color 0.3s;
+
+                        &:hover,
+                        &:active {
+                            background-color: var(--color-btn-demo-hover);
+                        }
+                    }
+                    &.btn-code {
+                        color: light-dark(#333, #fff);
+                        background-color: initial;
+                    }
+                }
             }
-        }
-    }
-
-    .ar-a {
-        display: inline-block;
-        background-color: light-dark(#237746,#2FA35F);
-        text-decoration: none;
-        color: light-dark(#fff,#fff);
-        font-weight: bold;
-        padding: 10px 15px;
-        box-sizing: border-box;
-
-        transition: background-color .3s;
-
-        &:active {
-            scale: 0.95;
-        }
-
-        &.demo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            width: 100%;
-
-            background-color: light-dark(#A12885,#a1249b);
-            text-decoration: none;
-            color: light-dark(#fff,#fff);
-            border-radius: 10px;
-            font-weight: bold;
-            padding: 10px 15px;
-            box-sizing: border-box;
-
-            transition: background-color .3s;
-
-            &:hover {
-                background-color: light-dark(#cb24c3,#691465);
-            }
-            &:active {
-                scale: 0.95;
-            }
-        }
-        &.first-button {
-            border-radius: 10px;
-
-            &:hover {
-                background-color: light-dark(#43c278ad,#2fa35fad);
-            }
-        }
-        &.second-button {
-            color: light-dark(#333,#fff);
-            background-color: initial;
         }
     }
     @keyframes reveal {
