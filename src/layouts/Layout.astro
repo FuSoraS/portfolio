@@ -2,7 +2,7 @@
 import { ROUTES } from '@/config'
 const { currentLocale } = Astro
 const { title, description, lang } = Astro.props
-const canonicalUrl = Astro.url.href
+const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 ---
 <!doctype html>
 <html lang={currentLocale}>
