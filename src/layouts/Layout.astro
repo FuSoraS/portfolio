@@ -72,6 +72,10 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		place-content: center;
 		scroll-behavior: smooth;
 
+		@media (prefers-reduced-motion: reduce) {
+			scroll-behavior: inherit;
+		}
+
 		&.dark {
 			color-scheme: dark;
 		}
@@ -79,9 +83,7 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 			color-scheme: light;
 		}
 		
-		@media (prefers-reduced-motion: reduce) {
-			scroll-behavior: inherit;
-		}
+
 	}
 	body {
 		margin: 0;
