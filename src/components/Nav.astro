@@ -23,7 +23,8 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         position: sticky;
         top: 0;
         z-index: 10;
-        background-color: light-dark(#f7f7f7, #4e4e4e);
+        /* background-color: light-dark(#f7f7f7, #4e4e4e); */
+        background-color: light-dark(var(--clr-base-light-darker), var(--clr-base-dark-lighter));
         height: auto;
         width: fit-content;
         padding: 12px 20px;
@@ -56,7 +57,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
     }
     @keyframes animate-header {
         to {
-            background-color: rgba(255, 255, 255, 0.185);
+            background-color: light-dark(hsl(from var(--clr-base-light) h s l / 80%), hsl(from var(--clr-base-dark) h s l / 20%));
             backdrop-filter: blur(4px);
             border-radius: 0 3px 15px 3px;
         }

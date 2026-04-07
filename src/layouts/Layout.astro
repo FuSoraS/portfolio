@@ -65,7 +65,11 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		--svg-color: light-dark(#333, #fff);
 		color-scheme: light dark;
 		font-family: var(--font-content);
-		background-color: light-dark(#fff, #1a1a1a);
+		--clr-base-dark: hsl(0 0% 10%);
+		--clr-base-dark-lighter: hsl(from var(--clr-base-dark) h s calc(l + 5));
+		--clr-base-light: hsl(0 0% 100%);
+		--clr-base-light-darker: hsl(from var(--clr-base-light) h s calc(l - 5));
+		background-color: light-dark(var(--clr-base-light), var(--clr-base-dark));
 	}
 	html {
 		display: flex;
@@ -82,8 +86,6 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		&.light {
 			color-scheme: light;
 		}
-		
-
 	}
 	body {
 		margin: 0;
