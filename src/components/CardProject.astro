@@ -69,32 +69,14 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
 </article>
 
 <style>
-    :root {
-        --color-btn-web: light-dark(
-            hsl(145, 54.55%, 30.2%),
-            hsl(144.83, 55.24%, 41.18%)
-        ); /* #237746,#2FA35F */
-        --color-btn-web-hover: light-dark(
-            hsl(145, 54.55%, 22.2%),
-            hsl(144.83, 55.24%, 31.18%)
-        );
-        --color-btn-demo: light-dark(
-            hsl(313.88, 60.2%, 39.41%),
-            hsl(302.88, 63.45%, 38.63%)
-        ); /* #A12885,#a1249 */
-        --color-btn-demo-hover: light-dark(
-            hsl(313.88, 60.2%, 32.41%),
-            hsl(302.88, 63.45%, 31.63%)
-        );
-    }
     .ar-main {
-        border: var(--border-n1);
+        border: var(--border-surface);
         border-radius: 15px;
         width: 100%;
         height: fit-content;
         overflow: hidden;
         transition: box-shadow 0.3s;
-        background-color: light-dark(#f7f7f7, #1a1a1a);
+        background-color: var(--clr-base);
         animation: reveal linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 30%;
@@ -121,7 +103,7 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                 & .ar-a {
                     display: inline-block;
                     text-decoration: none;
-                    color: light-dark(#fff, #fff);
+                    color: #fff;
                     font-weight: bold;
                     padding: 10px 15px;
                     box-sizing: border-box;
@@ -133,12 +115,12 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                     }
                     
                     &.btn-web {
-                        background-color: var(--color-btn-web);
+                        background-color: var(--accent);
                         border-radius: 10px;
 
                         &:hover,
                         &:active {
-                            background-color: var(--color-btn-web-hover);
+                            background-color: var(--accent-dark);
                         }
                     }
                     &.btn-demo {
@@ -148,9 +130,9 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                         gap: 2px;
                         width: 100%;
 
-                        background-color: var(--color-btn-demo);
+                        background-color: var(--accent-secondary);
                         text-decoration: none;
-                        color: light-dark(#fff, #fff);
+                        color: #fff;
                         border-radius: 10px;
                         font-weight: bold;
                         padding: 10px 15px;
@@ -160,11 +142,11 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
 
                         &:hover,
                         &:active {
-                            background-color: var(--color-btn-demo-hover);
+                            background-color: var(--accent-secondary-dark);
                         }
                     }
                     &.btn-code {
-                        color: light-dark(#333, #fff);
+                        color: var(--clr-text-primary);
                         background-color: initial;
                     }
                 }

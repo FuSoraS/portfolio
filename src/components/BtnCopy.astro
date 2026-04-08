@@ -7,15 +7,15 @@ const { currentLocale } = Astro
 const locate = getI18N({ currentLocale });
 ---
 
-<label id="mail" translate="no">{mailText}
-  <button id="btn-copy" title={locate.BTN_COPY}>
+<label class="mail" translate="no">{mailText}
+  <button class="btn-copy" title={locate.BTN_COPY}>
     <IconCopy />
   </button>
 </label>
 
 <script is:inline>
-  const btnCopy = document.getElementById('btn-copy');
-  const textElement = document.getElementById('mail');
+  const btnCopy = document.querySelector('.btn-copy');
+  const textElement = document.querySelector('.mail');
 
   btnCopy.addEventListener('click', async () => {
     try {
@@ -27,11 +27,11 @@ const locate = getI18N({ currentLocale });
 </script>
 
 <style>
-    #mail {
+    .mail {
         margin-left: .2rem;
         cursor: pointer;
     }
-    #btn-copy {
+    .btn-copy {
         padding: 6px 5px;
         background-color: light-dark(#cfcfcf,#4d4d4d);
         border: none;
@@ -40,13 +40,13 @@ const locate = getI18N({ currentLocale });
         transition: background-color, scale .1s ease;
 
         &:active,
-        #mail:active & {
+        .mail:active & {
           background-color: var(--accent);
             scale: 0.9;
         }
 
         & svg {
-            color: var(--svg-color);
+            color: var(--clr-base);
             height: 15px;
             width: 15px;
         }

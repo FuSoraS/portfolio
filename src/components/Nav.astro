@@ -17,19 +17,19 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         display: flex;
         place-items: center;
         place-content: center;
-        margin: auto;
         flex-wrap: wrap;
 
+        margin: auto;
         position: sticky;
         top: 0;
         z-index: 10;
-        background-color: var(--clr-base-muted);
+        background-color: var(--clr-base-secondary);
         height: auto;
         width: fit-content;
         padding: 12px 20px;
         border-radius: 15px 3px 15px 3px;
-        border-bottom: 2px solid hsl(from var(--clr-text-primary) h s calc(l - 50));
-        border-right: 2px solid hsl(from var(--clr-text-primary) h s calc(l - 50));
+        border-bottom: 2px solid var(--clr-surface);
+        border-right: 2px solid var(--clr-surface);
         font-size: 1rem;
         animation: animate-header linear both;
         animation-timeline: scroll(root);
@@ -38,25 +38,24 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         gap: 15px;
 
         a {
-            text-decoration: none;
-            color: var(--color-link);
             transition: color 0.2s ease-in-out;
         }
+
         .active,
         a:hover {
-            color: var(--accent-dark);
+            color: var(--accent);
         }
 
         & .line {
             height: 30px;
             width: 2px;
-            background-color:rgb(121 121 121);
+            background-color: var(--clr-surface);
             border-radius: 2px;
         }
     }
     @keyframes animate-header {
         to {
-            background-color: light-dark(hsl(from var(--clr-base-light) h s l / 80%), hsl(from var(--clr-base-dark) h s l / 20%));
+            background-color: hsl(from var(--clr-base) h s l / 60%);
             backdrop-filter: blur(4px);
             border-radius: 0 3px 15px 3px;
         }
