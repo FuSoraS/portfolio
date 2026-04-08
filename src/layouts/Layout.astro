@@ -58,6 +58,7 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 <style is:global>
 	:root {
 		--accent: hsl(145, 60%, 40%);
+		--accent-lighter: hsl(from var(--accent) h calc(s + 10) calc(l + 15));
 		--accent-dark: hsl(from var(--accent) h s calc(l - 10));
 		--accent-secondary: hsl(313.88, 60.2%, 39.41%);
 		--accent-secondary-dark: hsl(302.88, 63.45%, 31.63%);
@@ -87,6 +88,7 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 
 		&[data-theme="light"] {
 			--accent: hsl(144.83, 55.24%, 41.18%);
+			--accent-lighter: hsl(from var(--accent) h calc(s + 30) calc(l - 10));
 			--accent-secondary: hsl(302.88, 63.45%, 38.63%);
 			--clr-base: hsl(0 0% 100%);
 			--clr-text-primary: hsl(0 0% 10%);
