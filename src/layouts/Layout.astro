@@ -128,6 +128,47 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		color: var(--clr-text-primary);
 		text-decoration: none;
 	}
+
+	::view-transition-group(root) {
+		animation-duration: 0.7s;
+	}
+		
+	::view-transition-new(root) {
+		animation-name: reveal-light;
+		animation-fill-mode: both;
+	}
+
+	::view-transition-old(root),
+	.dark::view-transition-old(root) {
+		animation: none;
+		animation-fill-mode: both;
+		z-index: -1;
+	}
+
+	.dark::view-transition-new(root) {
+		animation-name: reveal-dark;
+		animation-fill-mode: both;
+	}
+
+	@keyframes reveal-dark {
+	from {
+		clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+	}
+
+	to {
+		clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+	}
+	}
+
+	@keyframes reveal-light {
+	from {
+		clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+	}
+
+	to {
+		clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+	}
+	}
 </style>
 <script>
 	const sections = document.querySelectorAll("section");
