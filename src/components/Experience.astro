@@ -25,12 +25,14 @@ const locate = getI18N({ currentLocale });
 <style>
     h2 svg {
         margin-left: .3rem;
-        animation: fadeIn 1s ease-in-out infinite alternate;
+        animation: fade-in 1s ease-in-out infinite alternate;
     }
-    @keyframes fadeIn {
+
+    @keyframes fade-in {
         from {
             color: var(--accent-dark);
         }
+
         to {
             color: var(--accent);
         }

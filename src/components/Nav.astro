@@ -18,7 +18,6 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         place-items: center;
         place-content: center;
         flex-wrap: wrap;
-
         margin: auto;
         position: sticky;
         top: 0;
@@ -27,7 +26,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         height: auto;
         width: fit-content;
         padding: 12px 20px;
-        border-radius: 15px 3px 15px 3px;
+        border-radius: 15px 3px;
         border-bottom: 2px solid var(--clr-surface);
         border-right: 2px solid var(--clr-surface);
         font-size: 1rem;
@@ -53,11 +52,12 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
             border-radius: 2px;
         }
     }
+
     @keyframes animate-header {
         to {
             background-color: hsl(from var(--clr-base) h s l / 60%);
             backdrop-filter: blur(4px);
-            border-radius: 0 3px 15px 3px;
+            border-radius: 0 3px 15px;
         }
     }
 </style>

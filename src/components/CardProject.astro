@@ -83,7 +83,7 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
 
         &:hover {
             box-shadow: 0 10px 30px
-                light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+                light-dark(rgb(0 0 0 / 40%), rgb(255 255 255 / 40%));
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -92,7 +92,7 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
         }
 
         & .container-content {
-            padding: 0 20px 25px 20px;
+            padding: 0 20px 25px;
 
             & .container-link {
                 display: flex;
@@ -107,7 +107,6 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                     font-weight: bold;
                     padding: 10px 15px;
                     box-sizing: border-box;
-
                     transition: background-color 0.3s;
 
                     &:active {
@@ -123,13 +122,13 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                             background-color: var(--accent-dark);
                         }
                     }
+
                     &.btn-demo {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         gap: 2px;
                         width: 100%;
-
                         background-color: var(--accent-secondary);
                         text-decoration: none;
                         color: #fff;
@@ -137,7 +136,6 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                         font-weight: bold;
                         padding: 10px 15px;
                         box-sizing: border-box;
-
                         transition: background-color 0.3s;
 
                         &:hover,
@@ -145,6 +143,7 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                             background-color: var(--accent-secondary-dark);
                         }
                     }
+
                     &.btn-code {
                         color: var(--clr-text-primary);
                         background-color: initial;
@@ -153,12 +152,14 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
             }
         }
     }
+
     @keyframes reveal {
         from {
             opacity: 0;
             translate: 0 100px;
             scale: 0.8;
         }
+
         to {
             opacity: 1;
             translate: 0 0;
