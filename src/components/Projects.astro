@@ -86,6 +86,10 @@ const locate = getI18N({ currentLocale });
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         gap: 20px;
 
+        @media(width <= 530px){
+            gap: 30px;
+        }
+
         & h3 {
             text-align: center;
             color: var(--accent-lighter);
