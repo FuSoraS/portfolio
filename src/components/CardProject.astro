@@ -43,24 +43,9 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                         rel="noreferrer noopener"
                         target="_blank"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"
-                        >
-                            <>
-                                <path
-                                    stroke="none"
-                                    d="M0 0h24v24H0z"
-                                    fill="none"
-                                />
-                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
-                            </>
-                        </svg>
                         {locate.PROJECTS.CARD.BTN_DEMO}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path fill="currentColor" d="M10 8.75v6.5c0 .6.67.96 1.17.63l4.9-3.25a.75.75 0 0 0 0-1.26l-4.9-3.25a.75.75 0 0 0-1.17.63"/></svg>
+
                     </a>
                 )
             }
@@ -127,7 +112,7 @@ const { linkWeb, linkRepo, linkYt } = Astro.props;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        gap: 2px;
+                        gap: 4px;
                         width: 100%;
                         background-color: var(--accent-secondary);
                         text-decoration: none;
