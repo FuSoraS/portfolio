@@ -1,11 +1,11 @@
-<button popovertarget="settings">
+<button popovertarget="settings" aria-label="Abrir configuraciónes">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-settings" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37 1 .608 2.296.07 2.572-1.065"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/></svg>
 </button>
 
 <section popover id="settings">
-    <div class="color-selector-accent">
+    <div class="selector-accent">
         <input type="color" name="color" value="#29a35c" class="color-picker-accent">
-        <button class="reset-color">
+        <button class="reset-color" aria-label="Restablecer color de acento" title="Restablecer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-rotate-clockwise" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5"/></svg>
         </button>
     </div>
@@ -43,21 +43,26 @@
         border: solid 2px var(--clr-base-secondary);
         border-radius: 12px;
 
-        & .color-selector-accent {
+        & .selector-accent {
             display: flex;
             align-items: center;
             gap: 10px;
 
             & input {
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
                 background-color: transparent;
                 border: none;
+                cursor: pointer;
             }
         }
 
         & .reset-color {
             background-color: transparent;
             border: none;
-
+            cursor: pointer;
+            
             &:active {
                 scale: 0.95;
             }
