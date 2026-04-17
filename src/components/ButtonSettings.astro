@@ -3,10 +3,11 @@
 </button>
 
 <section popover id="settings">
-    <input type="color" name="color" value="#ffffff" class="color-picker">
+    <input type="color" name="color" value="#29a35c" class="color-picker-accent">
+    <button class="reset-color">Reset</button>
 </section>
 <style>
-    button {
+    button[popovertarget] {
         position: fixed;
         bottom: 5px;
         right: 5px;
@@ -14,6 +15,22 @@
 </style>
 
 <script is:inline>
-    const input = document.querySelector(".color-picker")
+    const root = document.documentElement;
 
+    const colorPickerAccent = document.querySelector(".color-picker-accent")
+    const resetColor = document.querySelector(".reset-color")
+    const colorInit = colorPickerAccent?.getAttribute("value")
+    console.log(colorInit)
+    const colorAccentOrigin = getComputedStyle(root).getPropertyValue("--accent").trim()
+
+    colorPickerAccent?.addEventListener("input", (e) => {
+        colorPickerAccent.setAttribute("value", e.target.value)
+        root.style.setProperty("--accent", e.target.value)
+    }, { passive: true })
+
+    resetColor?.addEventListener("click", () => {
+        colorPickerAccent.value = colorInit;
+        colorPickerAccent.setAttribute("value", colorInit)
+        root.style.setProperty("--accent", colorAccentOrigin)
+    }, { passive: true })
 </script>
