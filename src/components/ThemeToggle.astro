@@ -50,13 +50,16 @@
       localStorage.setItem('theme', nextTheme);
     };
   
+    const isMobileViewport = () => globalThis.matchMedia("(max-width: 768px)").matches;
+
     const handleToggleClick = () => {
       const nextTheme = element.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
 
       const switchTheme = () => applyTheme(nextTheme);
 
-      //not supported
-      if (!document.startViewTransition) {
+      // On mobile, avoid View Transitions because they can conflict with
+      // dynamic browser UI bars and sticky elements.
+      if (isMobileViewport() || !document.startViewTransition) {
         switchTheme();
         return;
       }
