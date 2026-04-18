@@ -50,14 +50,14 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
             width: 2px;
             background-color: var(--clr-surface);
             border-radius: 2px;
-
-            @media (width <= 450px) {
-                display: none;
-            }
         }
 
-        @media (width <= 450px) {
+        @media (width <= 430px) {
             .hidden {
+                display: none;
+            }
+
+            .line {
                 display: none;
             }
         }
