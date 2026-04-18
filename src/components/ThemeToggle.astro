@@ -30,7 +30,7 @@
       }
     }
   </style>
-  <script is:inline>
+  <script>
     const theme = (() => {
       if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
         return localStorage.getItem("theme");
@@ -43,13 +43,15 @@
     
     const element = document.documentElement;
 
-    element.setAttribute("data-theme", theme);
+    if(theme) {
+      element.setAttribute("data-theme", theme);
+    }
 
-    const applyTheme = (nextTheme) => {
+    const applyTheme = (nextTheme: string) => {
       element.setAttribute("data-theme", nextTheme);
       localStorage.setItem("theme", nextTheme);
     };
-  
+
     const isMobileViewport = () => globalThis.matchMedia("(max-width: 768px)").matches;
 
     const handleToggleClick = () => {
@@ -63,9 +65,12 @@
         switchTheme();
         return;
       }
+
       // animate the theme change
       document.startViewTransition(switchTheme);
     };
-  
-    document.querySelector(".theme-toggle")?.addEventListener("click", handleToggleClick);
+
+    document.querySelectorAll(".theme-toggle").forEach((button) => {
+      button.addEventListener("click", handleToggleClick);
+    });
   </script>
