@@ -105,10 +105,6 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
     const resetColor = document.querySelector(".reset-color")
     const initColor = pickerColorAccent?.getAttribute("value")
 
-    console.log(initColor)
-
-    const colorAccentOrigin = getComputedStyle(root).getPropertyValue("--accent").trim()
-
     pickerColorAccent?.addEventListener("input", (e) => {
         pickerColorAccent.setAttribute("value", e.target.value)
         root.style.setProperty("--accent", e.target.value)
@@ -117,6 +113,6 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
     resetColor?.addEventListener("click", () => {
         pickerColorAccent.setAttribute("value", initColor)
         pickerColorAccent.value = initColor;
-        root.style.setProperty("--accent", colorAccentOrigin)
+        root.style.removeProperty("--accent")
     }, { passive: true })
 </script>
