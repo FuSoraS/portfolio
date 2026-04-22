@@ -37,7 +37,9 @@ const locate = getI18N({ currentLocale });
             text-align: center;
             font-weight: bold;
             font-size: max(37px, 90%);
-            color: var(--accent-lighter);
+            background-image: linear-gradient(to right,var(--accent), var(--accent-lighter));
+            color: transparent;
+            background-clip: text;
         }
 
         & p {
