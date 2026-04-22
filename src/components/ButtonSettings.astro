@@ -1,5 +1,9 @@
 ---
 import ThemeToggle from "@/components/ThemeToggle.astro";
+import { getI18N } from "@/i18n/index"
+
+const { currentLocale } = Astro
+const locate = getI18N({ currentLocale });
 ---
 
 <button popovertarget="settings" aria-label="Abrir configuraciónes">
@@ -8,7 +12,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 
 <section popover id="settings">
     <div class="selector-theme-toggle">
-        <p>Tema: </p>
+        <p>{locate.THEME_TITLE}:</p>
        <ThemeToggle />
     </div>
 
