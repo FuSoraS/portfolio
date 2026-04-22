@@ -10,7 +10,9 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
     <a href="#experience">{locate.NAV_EXPERIENCE}</a>
     <a href="#projects">{locate.NAV_PROJECTS}</a>
     <div class="line"></div>
-    <ThemeToggle className="hidden" />
+    <div class="toggle-wrap">
+        <ThemeToggle />
+    </div>
 </nav>
 <style>
     nav {
@@ -53,13 +55,9 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
         }
 
         @media (width <= 430px) {
-            .hidden {
-                display: none;
-            }
+            .toggle-wrap {display: none;}
 
-            .line {
-                display: none;
-            }
+            .line {display: none;}
         }
     }
 
