@@ -3,4 +3,4 @@ Personal Developer Portfolio
 
 Frontend Developer focused on Astro, TypeScript, and modern web experiences.
 
-![cover](/src/assets//home.webp)
+![cover](/src/assets/og.avif)
