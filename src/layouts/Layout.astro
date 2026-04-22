@@ -110,6 +110,14 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		border-inline: var(--border-surface);
 	}
 
+	h1 {
+        font-size: 2.3rem;
+
+		@media (--mobile) {
+			font-size: 2rem;
+		}
+	}
+
 	h2 {
 		font-size: 1.8rem;
 		font-weight: bold;
