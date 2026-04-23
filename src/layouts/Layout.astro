@@ -59,7 +59,7 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 	@custom-media --mobile (width <= 700px);
 
 	:root {
-		--font-content: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+		--font-content: system-ui, sans-serif;
 		--accent: hsl(145deg 60% 40%);
 		--accent-lighter: hsl(from var(--accent) h calc(s + 10) calc(l + 15));
 		--accent-dark: hsl(from var(--accent) h s calc(l - 10));
