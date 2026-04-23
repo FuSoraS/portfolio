@@ -52,21 +52,17 @@ const { className } = Astro.props
       localStorage.setItem("theme", nextTheme);
     };
 
-    const isMobileViewport = () => globalThis.matchMedia("(max-width: 768px)").matches;
-
     const handleToggleClick = () => {
       const nextTheme = element.getAttribute("data-theme") === "dark" ? "light" : "dark";
 
       const switchTheme = () => applyTheme(nextTheme);
 
-      // On mobile, avoid View Transitions because they can conflict with
-      // dynamic browser UI bars and sticky elements.
-      if (isMobileViewport() || !document.startViewTransition) {
+      if (!document.startViewTransition) {
         switchTheme();
         return;
       }
 
-      // animate the theme change
+      // Animate the theme change with a View Transition when supported.
       document.startViewTransition(switchTheme);
     };
 

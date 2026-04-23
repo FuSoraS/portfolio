@@ -6,58 +6,71 @@ const locate = getI18N({ currentLocale });
 import ThemeToggle from "@/components/ThemeToggle.astro";
 ---
 <nav>
-    <a class="active" href="#home">{locate.NAV_HOME}</a>
-    <a href="#experience">{locate.NAV_EXPERIENCE}</a>
-    <a href="#projects">{locate.NAV_PROJECTS}</a>
-    <div class="line"></div>
-    <div class="toggle-wrap">
-        <ThemeToggle />
+    <div class="nav-items">
+        <a class="active" href="#home">{locate.NAV_HOME}</a>
+        <a href="#experience">{locate.NAV_EXPERIENCE}</a>
+        <a href="#projects">{locate.NAV_PROJECTS}</a>
+        <div class="line"></div>
+        <div class="toggle-wrap">
+            <ThemeToggle />
+        </div>
     </div>
 </nav>
 <style>
     nav {
-        display: flex;
-        place-items: center;
-        place-content: center;
-        flex-wrap: wrap;
-        margin: auto;
         position: sticky;
         top: 0;
         z-index: 10;
-        background-color: var(--clr-base-secondary);
-        height: auto;
-        width: fit-content;
-        padding: 12px 20px;
-        border-radius: 15px 3px;
-        border-bottom: 2px solid var(--clr-surface);
-        border-right: 2px solid var(--clr-surface);
-        font-size: 1rem;
-        animation: animate-header linear both;
-        animation-timeline: scroll(root);
-        animation-range: 0 200px;
-        font-weight: bold;
-        gap: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
 
-        a {
-            transition: color 0.2s ease-in-out;
+        @media (pointer: coarse) {
+            /* On touch devices, sticky can interfere with the ThemeToggle animation. */
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .active,
-        a:hover {
-            color: var(--accent);
-        }
+        .nav-items {
+            background-color: var(--clr-base-secondary);
+            display: flex;
+            place-items: center;
+            place-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            width: fit-content;
+            padding: 12px 20px;
+            border-radius: 15px 3px;
+            border-bottom: 2px solid var(--clr-surface);
+            border-right: 2px solid var(--clr-surface);
+            font-size: 1rem;
+            font-weight: bold;
+            animation: animate-header linear both;
+            animation-timeline: scroll(root);
+            animation-range: 0 200px;
 
-        & .line {
-            height: 30px;
-            width: 2px;
-            background-color: var(--clr-surface);
-            border-radius: 2px;
-        }
+            & a {
+                transition: color 0.2s ease-in-out;
+            }
 
-        @media (width <= 430px) {
-            .toggle-wrap {display: none;}
+            .active,
+            a:hover {
+                color: var(--accent);
+            }
 
-            .line {display: none;}
+            & .line {
+                height: 30px;
+                width: 2px;
+                background-color: var(--clr-surface);
+                border-radius: 2px;
+            }
+
+            @media (width <= 430px) {
+                .toggle-wrap {display: none;}
+
+                .line {display: none;}
+            }
         }
     }
 
