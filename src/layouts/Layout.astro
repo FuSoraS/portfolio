@@ -12,7 +12,8 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		<title>{title}</title>
 
 		<link rel="canonical" href={canonicalUrl} />
-		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+		<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml">
+		<link rel="icon" href="/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
 		<meta name="google-site-verification" content="l0My55aihzJm_JtopsqJ5AvG-_KkYURzqQy3B03_UUE" />
 
 		<meta name="description" content={description}>
