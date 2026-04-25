@@ -102,16 +102,18 @@ const locate = getI18N({ currentLocale });
     }
 </style>
 
-<script is:inline>
+<script>
     const root = document.documentElement;
 
-    const pickerColorAccent = document.querySelector(".color-picker-accent")
+    const pickerColorAccent = document.querySelector(".color-picker-accent") as HTMLInputElement
     const resetColor = document.querySelector(".reset-color")
-    const initColor = pickerColorAccent?.getAttribute("value")
+    const initColor = pickerColorAccent.getAttribute("value") as string
 
-    pickerColorAccent?.addEventListener("input", (e) => {
-        pickerColorAccent.setAttribute("value", e.target.value)
-        root.style.setProperty("--accent", e.target.value)
+    pickerColorAccent.addEventListener("input", (e) => {
+        if(e.target instanceof HTMLInputElement) {
+            pickerColorAccent.setAttribute("value", e.target.value)
+            root.style.setProperty("--accent", e.target.value)
+        }
     }, { passive: true })
 
     resetColor?.addEventListener("click", () => {

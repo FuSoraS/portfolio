@@ -13,12 +13,13 @@ const locate = getI18N({ currentLocale });
   </button>
 </label>
 
-<script is:inline>
+<script>
   const btnCopy = document.querySelector('.btn-copy');
   const textElement = document.querySelector('.mail');
 
-  btnCopy.addEventListener('click', async () => {
+  btnCopy?.addEventListener('click', async () => {
     try {
+      if(textElement)
       await navigator.clipboard.writeText(textElement.textContent);
     } catch (err) {
       console.error('Copy error:', err);
