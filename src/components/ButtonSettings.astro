@@ -10,7 +10,7 @@ const locate = getI18N({ currentLocale });
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-settings" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37 1 .608 2.296.07 2.572-1.065"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/></svg>
 </button>
 
-<section popover id="settings">
+<section popover id="settings" class="modal-settings">
     <div class="selector-theme-toggle">
         <p>{locate.THEME_TITLE}:</p>
        <ThemeToggle />
@@ -25,6 +25,7 @@ const locate = getI18N({ currentLocale });
         </button>
     </div>
 </section>
+
 <style>
     button[popovertarget] {
         position: fixed;
@@ -49,22 +50,7 @@ const locate = getI18N({ currentLocale });
         }
     }
 
-    .selector-theme-toggle {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 1em;
-
-        & p {
-            margin: 0;
-        }
-    }
-
-    .line {
-        border: solid 1px var(--clr-text-primary)
-    }
-
-    section:popover-open {
+    .modal-settings:popover-open {
         display: grid;
         inset: unset;
         bottom: 65px;
@@ -74,11 +60,42 @@ const locate = getI18N({ currentLocale });
         border: solid 2px var(--clr-base-secondary);
         border-radius: 12px;
         gap: 1em;
+        transition: opacity 200ms ease-in;
+        opacity: 1;
+
+	    @starting-style {
+            opacity: 0;
+        }
+
+        .selector-theme-toggle {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1em;
+            transition: all 400ms ease;
+
+            @starting-style {
+                translate: -10px 0;
+            }
+
+            & p {
+                margin: 0;
+            }
+        }
+
+        .line {
+            border: solid 1px var(--clr-text-primary)
+        }
 
         & .selector-accent {
             display: flex;
             align-items: center;
             gap: 10px;
+            transition: translate 350ms ease;
+
+            @starting-style {
+                translate: -10px 0;
+            }
 
             & input {
                 width: 40px;
@@ -100,11 +117,25 @@ const locate = getI18N({ currentLocale });
             }
         }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+        .modal-settings:popover-open {
+            transition: none;
+
+            .selector-theme-toggle {
+                transition: none;
+            }
+
+            & .selector-accent {
+                transition: none;
+            }
+        }
+    }
+        
 </style>
 
 <script>
     const root = document.documentElement;
-
     const pickerColorAccent = document.querySelector(".color-picker-accent") as HTMLInputElement
     const resetColor = document.querySelector(".reset-color")
     const initColor = pickerColorAccent.getAttribute("value") as string

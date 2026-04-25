@@ -86,7 +86,7 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		scroll-behavior: smooth;
 
 		@media (prefers-reduced-motion: reduce) {
-			scroll-behavior: inherit;
+			scroll-behavior: auto;
 		}
 
 		&[data-theme="dark"] {
@@ -171,24 +171,33 @@ const canonicalUrl = new URL(Astro.url.pathname, ROUTES.HOSTNAME).toString()
 		animation-fill-mode: both;
 	}
 
-	@keyframes reveal-dark {
-	from {
-		clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+	@media (prefers-reduced-motion: reduce) {
+		::view-transition-group(root),
+		::view-transition-new(root),
+		::view-transition-old(root) {
+			animation: none;
+			animation-fill-mode: both;
+		}
 	}
 
-	to {
-		clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
-	}
+	@keyframes reveal-dark {
+		from {
+			clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+		}
+
+		to {
+			clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+		}
 	}
 
 	@keyframes reveal-light {
-	from {
-		clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
-	}
+		from {
+			clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+		}
 
-	to {
-		clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
-	}
+		to {
+			clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+		}
 	}
 </style>
 <script>
