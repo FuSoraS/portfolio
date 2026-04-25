@@ -13,20 +13,6 @@ const locate = getI18N({ currentLocale });
   </button>
 </label>
 
-<script>
-  const btnCopy = document.querySelector('.btn-copy');
-  const textElement = document.querySelector('.mail');
-
-  btnCopy?.addEventListener('click', async () => {
-    try {
-      if(textElement)
-      await navigator.clipboard.writeText(textElement.textContent);
-    } catch (err) {
-      console.error('Copy error:', err);
-    }
-  });
-</script>
-
 <style>
     .mail {
         margin-left: .2rem;
@@ -54,3 +40,17 @@ const locate = getI18N({ currentLocale });
         }
     }
 </style>
+
+<script>
+  const btnCopy = document.querySelector(".btn-copy");
+  const textElement = document.querySelector(".mail");
+
+  btnCopy?.addEventListener("click", async () => {
+    try {
+      if(textElement)
+      await navigator.clipboard.writeText(textElement.textContent);
+    } catch (err) {
+      console.error("Copy error:", err);
+    }
+  });
+</script>
