@@ -51,6 +51,8 @@ const locate = getI18N({ currentLocale });
     }
 
     .modal-settings:popover-open {
+        --left-to-right-animation: -10px 0;
+
         display: grid;
         inset: unset;
         bottom: 65px;
@@ -72,10 +74,10 @@ const locate = getI18N({ currentLocale });
             flex-wrap: wrap;
             align-items: center;
             gap: 1em;
-            transition: all 400ms ease;
+            transition: translate 300ms ease;
 
             @starting-style {
-                translate: -10px 0;
+                translate: var(--left-to-right-animation);
             }
 
             & p {
@@ -91,15 +93,17 @@ const locate = getI18N({ currentLocale });
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: translate 350ms ease;
+            transition: translate 300ms ease;
 
             @starting-style {
-                translate: -10px 0;
+                translate: var(--left-to-right-animation)
             }
 
             & input {
-                width: 40px;
-                height: 40px;
+                --size: 40px;
+
+                width: var(--size);
+                height: var(--size);
                 border-radius: 100%;
                 background-color: transparent;
                 border: none;
