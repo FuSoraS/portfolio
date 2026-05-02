@@ -9,11 +9,12 @@ const { className } = Astro.props
 </button>
 
 <style>
-    .sun { fill: #000; }
+    .sun { fill: #fff;}
     .moon { fill: transparent; }
   
     :global(html[data-theme="dark"]) .sun { fill: transparent; }
     :global(html[data-theme="dark"]) .moon { fill: #fff; }
+    :global(html[data-theme="light"]) .sun { fill: #000; }
 
     .theme-toggle {
       background: none;
