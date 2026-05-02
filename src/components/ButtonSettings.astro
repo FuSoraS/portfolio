@@ -63,7 +63,7 @@ const locate = getI18N({ currentLocale });
         border: solid 2px var(--clr-base-secondary);
         border-radius: 12px;
         gap: 1em;
-        transition: opacity 200ms ease-in;
+        transition: opacity 150ms ease-in;
         opacity: 1;
 
 	    @starting-style {
@@ -75,7 +75,7 @@ const locate = getI18N({ currentLocale });
             flex-wrap: wrap;
             align-items: center;
             gap: 1em;
-            transition: translate var(--left-to-right-animation-duration) ease;
+            transition: translate var(--left-to-right-animation-duration) ease-in-out;
 
             @starting-style {
                 translate: var(--left-to-right-animation);
@@ -94,7 +94,7 @@ const locate = getI18N({ currentLocale });
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: translate var(--left-to-right-animation-duration) ease;
+            transition: translate var(--left-to-right-animation-duration) ease-in-out;
 
             @starting-style {
                 translate: var(--left-to-right-animation)
